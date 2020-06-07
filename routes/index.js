@@ -81,6 +81,13 @@ router.post('/thanhtoangiohang', auth.authen, controller.thanhtoangiohang);
 //Thanh toan gio hang
 router.post('/xacnhanthanhtoangiohang', auth.authen, controller.xacnhanthanhtoangiohang);
 
+// Tới trang chỉnh sửa thông tin sản phẩm. theo id
+router.get('/themnguoidung', auth.authen, controller.themnguoidung);
+router.post('themnguoidung', auth.authen, controller.postthemnguoidung);      
+
+
+
+
 
 ////////////////////////// TINNNNNNNN //////////////////////////////
 router.get('/danhmuc/:tendanhmuc', controller.xemtheodanhmuc);
@@ -89,5 +96,6 @@ router.get('/danhmuc/:tendanhmuc', controller.xemtheodanhmuc);
 router.get('/chinhsua/:id', auth.authen, controller.chinhsuamathang);
 router.post('/chinhsua/:id', auth.authen, controller.postchinhsuamathang);      // Xử lí form chỉnh sửa
 router.post('/xoa/:id', auth.authen, controller.xoasanpham);      // Xử lí form chỉnh sửa
+
 
 module.exports = router;
