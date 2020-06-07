@@ -11,16 +11,16 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <h1> <%= status %> </h1>
-    <form method="POST" action="/post">
+    <form method="POST" action="/themnguoidung">
       <div class="form-group">
         <label for="">User name</label>
         <input type="text" name="usr" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter usr">
         <input type="password" name="pass" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter pass">
         <label for="inputState">State</label>
-        <select id="role" class="form-control">
+        <select id="role" name="role" class="form-control">
           <label for="inputState">Chọn quyền</label>
           <option value="" selected>Người dùng bình thường</option>
-          <option value="admin" selected>Admin</option>
+          <option value="admin" select>Admin</option>
 
         </select>
       </div>

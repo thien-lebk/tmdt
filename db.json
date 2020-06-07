@@ -24,6 +24,12 @@
       "username": "guest",
       "password": "202cb962ac59075b964b07152d234b70",
       "giohang": "5L2n48nI"
+    },
+    {
+      "username": "admin3",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "giohang": "w2RC75rd",
+      "role": "admin"
     }
   ],
   "GioHang": [
@@ -40,6 +46,67 @@
     {
       "username": "guest",
       "idgiohang": "5L2n48nI",
+      "mathang": []
+    },
+    {
+      "username": "guest1",
+      "idgiohang": "EriM8MDS",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "mathang": []
+    },
+    {
+      "username": "admin4",
+      "mathang": []
+    },
+    {
+      "username": "admin5",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "mathang": []
+    },
+    {
+      "username": "admin4",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "mathang": []
+    },
+    {
+      "username": "admin4",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "idgiohang": "UtDTVUAD",
+      "mathang": []
+    },
+    {
+      "username": "guest2",
+      "idgiohang": "puzcLSME",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "idgiohang": "DdJOk7aV",
+      "mathang": []
+    },
+    {
+      "username": "admin3",
+      "idgiohang": "w2RC75rd",
       "mathang": []
     }
   ],

@@ -418,6 +418,52 @@ module.exports.xacnhanthanhtoangiohang = function (req, res, next) {
     res.render('thongtinhoadon', { chuyenmuc: chuyenmuc, donhang: donhang, name: username, find: find,role:""});
 }
 
+//Thêm người dùng
+module.exports.themnguoidung = function (req, res, next) {
+   
+    res.render('themnguoidung', {  name:"", username:"",role:"",title:"Thêm người dùng",status:"" });
+}
+module.exports.postthemnguoidung = function (req, res, next) {
+    var usr = req.body.usr;
+    var pass = md5(req.body.pass);
+    var giohang = randomid();
+    var role = req.body.role;
+    var name;
+  
+   
+    var find = db.get('User').find({ username: usr }).value();
+
+    if (find) {
+        res.render('themnguoidung', { title: 'Express', status: 'Tai khoan da duoc dang ki' });
+
+
+    } else {
+        
+        if(role == "admin"){
+            db.get('User')
+            .push({ username: usr, password: pass, giohang: giohang,role:"admin" })
+            .write();
+        } else{
+            db.get('User')
+            .push({ username: usr, password: pass, giohang: giohang })
+            .write();
+        }
+        
+
+
+        db.get('GioHang')
+            .push({ username: usr, idgiohang: giohang, mathang: [] })
+            .write();
+
+        res.render('dangnhap', { title: 'Express', status: 'Dang ki thanh cong', name: name, role:""});
+
+    }
+}
+
+
+
+
+
 
 ///////////////////////// TIN //////////////////////////////
 module.exports.xemtheodanhmuc = function(req, res, next){
