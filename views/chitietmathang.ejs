@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<!-- <Header> -->
+<%- include("chucnang/header.ejs") %>
+<!-- <End of Header> -->
+
+<body>
+  <!-- Navnar -->
+  <%- include("chucnang/navbar.ejs") %>
+  <!-- End of Navnar -->
+  <ul>
+    <p>Danh mục</p>
+    <%  chuyenmuc.forEach(element => { %>
+      <li><a href=<%= "/danhmuc/" + element.ten %> > <%= element.ten %></a></li>
+
+    <% }); %>
+  </ul>
+
+  <p>Sản phẩm</p>
+
+  <div class="card" style="width: 18rem;">
+    <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
+    <div class="card-body">
+      <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
+      <p> Mô tả: <%= mathang.mota %></p>
+      <P>Số lượng trong kho: <%= mathang.soluong %></P>
+      
+      <!-- Kiểm tra coi có khuyến mãi ko -->
+      <% var date1 = new Date(mathang.hankm); %>
+      <% var date2 = new Date() %>  
+      <% if ((date1.getTime() >= date2.getTime()) && (mathang.giakm != "")) { %>
+        <p class="card-text">Giá <%= mathang.giakm %>đ</p>
+        <p class="card-text" style="text-decoration: line-through;">Giá <%= mathang.gia %>đ</p>
+      <% } else { %> 
+        <p class="card-text">Giá <%= mathang.gia %>đ</p>
+      <% } %> 
+
+      <form method="post">
+        <input type="hidden" name="ten" value=<%= mathang.ten %>>
+        <input type="hidden" name="anh" value=<%= mathang.anh %>>
+        <input type="hidden" name="mota" value=<%= mathang.mota %>>
+        <input type="hidden" name="soluong" value=<%= mathang.soluong %>>
+        <input type="hidden" name="id" value=<%= mathang.id %>>
+        
+        <!-- Kiểm tra coi có khuyến mãi ko -->
+        <% var date1 = new Date(mathang.hankm); %>
+        <% var date2 = new Date() %>  
+        <% if ((date1.getTime() >= date2.getTime()) && (mathang.giakm != "")) { %>
+          <input type="hidden" name="gia" <%= mathang.giakm %>>
+        <% } else { %> 
+          <input type="hidden" name="gia" <%= mathang.gia %>>
+        <% } %> 
+
+        <input type="hidden" name="gia" <%= mathang.gia %>>
+        <input type="hidden" name="soluongmua" value="1">
+
+        <button type="submit" formaction="/thanhtoan">Mua ngay</button>
+        <button type="submit" formaction="/themgiohang">Thêm vào giỏ hàng</button>
+      </form>
+
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+{
+  "User": [
+    {
+      "username": "thien456",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "id": "",
+      "email": "",
+      "rule": "",
+      "giohang": "thien456"
+    },
+    {
+      "username": "admin",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "giohang": "4sHNLGMo",
+      "role": "admin"
+    },
+    {
+      "username": "admin2",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "giohang": "ve6aLwBh",
+      "role": "admin"
+    },
+    {
+      "username": "guest",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "giohang": "5L2n48nI"
+    }
+  ],
+  "GioHang": [
+    {
+      "username": "thien456",
+      "mathang": [],
+      "idgiohang": "thien456"
+    },
+    {
+      "username": "admin2",
+      "idgiohang": "ve6aLwBh",
+      "mathang": []
+    },
+    {
+      "username": "guest",
+      "idgiohang": "5L2n48nI",
+      "mathang": []
+    }
+  ],
+  "Chuyenmuc": [
+    {
+      "ten": "123",
+      "id": "UidrhuWQ",
+      "url": ""
+    },
+    {
+      "ten": "test2",
+      "id": "U2uFCGFS",
+      "url": ""
+    },
+    {
+      "ten": "test23",
+      "id": "yCMi5obp",
+      "url": "123"
+    },
+    {
+      "ten": "abcd",
+      "id": "XkIenITN",
+      "url": "123123"
+    },
+    {
+      "ten": "ghe",
+      "id": "OZWir4rm",
+      "url": "ghe"
+    },
+    {
+      "ten": "Bàn",
+      "id": "CaEcdk3d",
+      "url": "ban"
+    }
+  ],
+  "HoaDon": [
+    {
+      "idhoadon": "fe06W8PP",
+      "magiaodich": "BkZBI1UV",
+      "thanhtoan": "momo",
+      "usr": "thien456",
+      "hang": [
+        {
+          "ten": "abcd",
+          "gia": "10000",
+          "id": "1rBrQFNV",
+          "soluongdat": "5"
+        }
+      ],
+      "thanhtien": "50000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "x8UYWWr7",
+      "magiaodich": "6kMxPDQl",
+      "thanhtoan": "momo",
+      "usr": "thien456",
+      "hang": [
+        {
+          "ten": "Ghế 1",
+          "gia": "1000",
+          "id": "k4vkUkLp",
+          "soluongdat": "2"
+        }
+      ],
+      "thanhtien": "2000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "BC5Zk2jL",
+      "magiaodich": "uw3Ps03o",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "abcd",
+          "gia": "10000",
+          "id": "1rBrQFNV",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "10000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "DI69gdrs",
+      "magiaodich": "TWIU2rJA",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "abcd",
+          "id": "1rBrQFNV",
+          "mota": "test",
+          "gia": "10000",
+          "anh": "https://znews-photo.zadn.vn/w660/Uploaded/lce_jwquc/2020_05_23/Z17622052020.png",
+          "soluongdat": "5"
+        },
+        {
+          "ten": "TEST2",
+          "id": "vkEBPj1S",
+          "mota": "test3",
+          "gia": "1000000",
+          "anh": "https://genk.mediacdn.vn/thumb_w/660/139269124445442048/2020/5/24/dsc00432-1590308381711407041739.jpg",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": 1050000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "XwpLIzW8",
+      "magiaodich": "PzDODilt",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "abcd",
+          "gia": "10000",
+          "id": "1rBrQFNV",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "10000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "IcpL4C42",
+      "magiaodich": "aogxEzc9",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "abcd",
+          "gia": "10000",
+          "id": "1rBrQFNV",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "NaN",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "74rs6aJ2",
+      "magiaodich": "vuMUDQzw",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "abcd",
+          "gia": "10000",
+          "id": "1rBrQFNV",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "10000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "6XOoxwIk",
+      "magiaodich": "TjXpMkZz",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế 1",
+          "gia": "1000",
+          "id": "k4vkUkLp",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "1000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "CMIgIBka",
+      "magiaodich": "WIyEBXtd",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Chair nè",
+          "gia": "350000",
+          "id": "woTukjEX",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "350000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "GH7B0Gxp",
+      "magiaodich": "qOJDiOq6",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Chair nè",
+          "gia": "350000",
+          "id": "woTukjEX",
+          "soluongdat": "2"
+        }
+      ],
+      "thanhtien": "700000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "emT16TDg",
+      "magiaodich": "s8bJvLlY",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Macbook",
+          "id": "Zlkr9Rmt",
+          "mota": "Có tiền rồi mua",
+          "gia": "23000000",
+          "anh": "https://images.unsplash.com/photo-1516031190212-da133013de50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "soluong": "15",
+          "chuyenmuc": "123",
+          "giakm": "19999999",
+          "hankm": "2020-06-04T18:15:19.401Z",
+          "soluongdat": "1"
+        },
+        {
+          "ten": "Bàn 1",
+          "id": "GP4mRNlm",
+          "mota": "Bàn đẹp nè",
+          "gia": "500000",
+          "anh": "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "soluong": "120",
+          "chuyenmuc": "Bàn",
+          "soluongdat": "2"
+        }
+      ],
+      "thanhtien": 20999999,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-04T18:15:19.401Z"
+    },
+    {
+      "idhoadon": "mF9wubxo",
+      "magiaodich": "NgXS7tVd",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Macbook",
+          "id": "Zlkr9Rmt",
+          "soluongdat": "1",
+          "gia": "19999999"
+        },
+        {
+          "ten": "Bàn 1",
+          "id": "GP4mRNlm",
+          "soluongdat": "2",
+          "gia": "500000"
+        }
+      ],
+      "thanhtien": 20999999,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-04T18:49:10.417Z"
+    },
+    {
+      "idhoadon": "wGImmyQo",
+      "magiaodich": "2ob0daMy",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Macbook",
+          "id": "Zlkr9Rmt",
+          "soluongdat": "1",
+          "gia": "19999999"
+        },
+        {
+          "ten": "Chair nè",
+          "id": "woTukjEX",
+          "soluongdat": "1",
+          "gia": "350000"
+        }
+      ],
+      "thanhtien": 20349999,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-04T18:51:13.172Z"
+    },
+    {
+      "idhoadon": "t4Zdc5HI",
+      "magiaodich": "nqFBPfzm",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế 2",
+          "gia": "130000",
+          "id": "onyCct5Q",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "130000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-07T10:50:59.864Z"
+    }
+  ],
+  "MatHang": [
+    {
+      "ten": "Ghế 2",
+      "id": "onyCct5Q",
+      "mota": "Ghế đẹp nữa nè",
+      "gia": "150000",
+      "anh": "https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "soluong": "100",
+      "chuyenmuc": "ghe",
+      "giakm": "130000",
+      "hankm": "2020-07-07"
+    },
+    {
+      "ten": "Ghế game",
+      "id": "LVImo5xl",
+      "mota": "Không đẹp nè",
+      "gia": "190000",
+      "anh": "https://images.unsplash.com/photo-1574189555774-7cbcd66d0fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "soluong": "150",
+      "chuyenmuc": "ghe",
+      "giakm": "",
+      "hankm": ""
+    },
+    {
+      "ten": "Bàn 1",
+      "id": "GP4mRNlm",
+      "mota": "Bàn đẹp nè",
+      "gia": "500000",
+      "anh": "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "soluong": "120",
+      "chuyenmuc": "Bàn",
+      "soluongdat": 1
+    },
+    {
+      "ten": "Bàn game",
+      "id": "m0820HIz",
+      "mota": "Bàn ko đẹp nè",
+      "gia": "900000",
+      "anh": "https://images.unsplash.com/photo-1570993492881-25240ce854f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1328&q=80",
+      "soluong": "50",
+      "chuyenmuc": "Bàn"
+    },
+    {
+      "ten": "Chair nè",
+      "id": "woTukjEX",
+      "mota": "không có gi",
+      "gia": "600000",
+      "anh": "https://images.unsplash.com/photo-1562113530-57ba467cea38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "soluong": "120",
+      "chuyenmuc": "123",
+      "giakm": "350000",
+      "hankm": "2020-06-05",
+      "soluongdat": 1
+    },
+    {
+      "ten": "Macbook",
+      "id": "Zlkr9Rmt",
+      "mota": "Có tiền rồi mua",
+      "gia": "23000000",
+      "anh": "https://images.unsplash.com/photo-1516031190212-da133013de50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "soluong": "15",
+      "chuyenmuc": "123",
+      "giakm": "19999999",
+      "hankm": "2020-06-11",
+      "soluongdat": 1
+    }
+  ]
+}

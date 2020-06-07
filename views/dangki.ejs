@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <!-- <Header> -->
+      <%- include("chucnang/header.ejs") %>
+      <!-- <End of Header> -->
+    
+      <body>
+          <!-- Navnar -->
+        <%- include("chucnang/navbar.ejs") %>
+          <!-- End of Navnar -->
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <h1> <%= status %> </h1>
+    <form method="POST" action="/post">
+      <div class="form-group">
+        <label for="">User name</label>
+        <input type="text" name="usr" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter usr">
+        <input type="password" name="pass" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter pass">
+
+      </div>
+     
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<%  listsp.forEach(element => { %>
+<div class="card" style="width: 250px; border: 2px solid blue; margin: 30px">
+    <img src= <%= element.anh %> alt=<%= element.ten %> style="height: 246px; width: 246px;">
+    <div class="card-body">
+      <h5 class="card-title"> Mặt hàng: <%= element.ten %></h5>
+
+      <!-- Kiểm tra coi có khuyến mãi không? -->
+      <% var date1 = new Date(element.hankm); %>
+      <% var date2 = new Date() %>  
+      <% if ((date1.getTime() >= date2.getTime()) && (element.giakm != "")) { %>
+        <p class="card-text">Giá <%= element.giakm %>đ</p>
+        <p class="card-text" style="text-decoration: line-through;">Giá <%= element.gia %>đ</p>
+      <% } else { %> 
+        <p class="card-text">Giá <%= element.gia %>đ</p>
+      <% } %> 
+
+      <form action="/chitietmathang" method="post">
+        
+        <input type="hidden" name="id" value= <%= element.id %>>
+        <button type="submit" class="btn btn-success">Chọn mua</button>
+      </form>
+      <% if(role){ %>
+      <a class="btn btn-warning" href=<%= "/chinhsua/" + element.id %>  role="button">Sửa</a>
+      <% }%>
+    </div>
+  </div>
+  <% }); %>

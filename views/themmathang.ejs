@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <!-- <Header> -->
+      <%- include("chucnang/header.ejs") %>
+      <!-- <End of Header> -->
+    
+      <body>
+          <!-- Navnar -->
+        <%- include("chucnang/navbar.ejs") %>
+          <!-- End of Navnar -->
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form method="POST" action="/themmathang">
+      <div class="form-group">
+        <label for="">Tên mặt hàng</label>
+        <input type="text" name="ten" class="form-control">
+        <label for="">Mô tả</label>
+        <input type="text" name="mota" class="form-control">
+        <label for="">Ảnh</label>
+        <input type="text" name="anh" class="form-control">
+        <label for="">Số lượng</label>
+        <input type="number" name="soluong" class="form-control">
+        <label for="">Giá tiền</label>
+        <input type="number" name="gia" class="form-control">
+        <label for="">Giá Khuyến mãi</label>
+        <input type="number" name="giakm" class="form-control">
+        <label for="">Hạn khuyến mãi</label>
+        <input type="date" name="hankm" class="form-control">
+        <label for="">Chuyên mục</label>
+        <select name="chuyenmuc" id="chuyenmuc">
+          <!-- Su dung forEach -->
+          <%  chuyenmuc.forEach(element => { %>
+            <option value= <%= element.ten %>> <%= element.ten %></option>
+       <% }); %>
+          
+        </select>
+      </div>
+     
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>

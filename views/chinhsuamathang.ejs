@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <!-- <Header> -->
+      <%- include("chucnang/header.ejs") %>
+      <!-- <End of Header> -->
+    
+      <body>
+          <!-- Navnar -->
+        <%- include("chucnang/navbar.ejs") %>
+          <!-- End of Navnar -->
+    <h1>Chỉnh sửa <%= sanpham.ten %></h1>
+    <form method="POST" action=<%= "/chinhsua/" + sanpham.id %>>
+      <div class="form-group">
+        <label for="">Tên mặt hàng</label>
+        <input type="text" name="ten" class="form-control" value='<%= sanpham.ten %>' >
+        <label for="">Mô tả</label>
+        <input type="text" name="mota" class="form-control" value='<%= sanpham.mota %>' >
+        <label for="">Ảnh</label>
+        <input type="text" name="anh" class="form-control"  value='<%= sanpham.anh %>' >
+        <label for="">Số lượng</label>
+        <input type="number" name="soluong" class="form-control"  value='<%= sanpham.soluong %>' >
+        <label for="">Giá tiền</label>
+        <input type="number" name="gia" class="form-control" value='<%= sanpham.gia %>' >
+        <label for="">Giá Khuyến mãi</label>
+        <input type="number" name="giakm" class="form-control" value='<%= sanpham.giakm %>' >
+        <label for="">Hạn khuyến mãi</label>
+        <input type="date" name="hankm" class="form-control" value='<%= sanpham.hankm %>' >
+        <label for="">Chuyên mục</label>
+        <select name="chuyenmuc" id="chuyenmuc">
+          <!-- Su dung forEach -->
+          <%  chuyenmuc.forEach(element => { %>
+            <% if(element.ten == sanpham.chuyenmuc) {%> 
+                <option value= <%= element.ten %> selected> <%= element.ten %></option>
+            <% } else{ %>
+                <option value= <%= element.ten %>> <%= element.ten %></option>
+            <% } %> 
+       <% }); %>
+          
+        </select>
+      </div>
+     
+      <button type="submit" class="btn btn-success">Lưu lại</button>
+    </form>
+    <form method="POST" action=<%= "/xoa/" + sanpham.id %>>
+        <button type="submit" class="btn btn-danger">Xóa sản phẩm</button>
+    </form>
+  </body>
+</html>
