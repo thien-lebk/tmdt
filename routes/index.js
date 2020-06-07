@@ -82,8 +82,8 @@ router.post('/thanhtoangiohang', auth.authen, controller.thanhtoangiohang);
 router.post('/xacnhanthanhtoangiohang', auth.authen, controller.xacnhanthanhtoangiohang);
 
 // Tới trang chỉnh sửa thông tin sản phẩm. theo id
-router.get('/themnguoidung', auth.authen, controller.themnguoidung);
-router.post('themnguoidung', auth.authen, controller.postthemnguoidung);      
+// router.get('/themnguoidung', auth.authen, controller.themnguoidung);
+// router.post('themnguoidung', auth.authen, controller.postthemnguoidung);      
 
 
 
