@@ -16,12 +16,18 @@
     <% }); %>
   </ul>
 
-  <p id="tongtien">Tổng tiền: </p>
-  <form action="thanhtoangiohang" method="post">
-    <input type="hidden" name="idgiohang" value="<%= giohang.idgiohang %>">
+ 
+      <% if(giohang.mathang.length >0) { %>
+        <p id="tongtien">Tổng tiền: </p>
+        <form action="thanhtoangiohang" method="post">
+          <input type="hidden" name="idgiohang" value="<%= giohang.idgiohang %>">
     <button type="submit" class="btn btn-success">Thanh toán</button>
   </form>
   <p>Sản phẩm</p>
+<% } else {%>
+  <h2>Giỏ hàng trống</h2>
+  <% } %>
+ 
   <% giohang.mathang.forEach(element => { %>
   <div class="card" style="width: 18rem;">
     <img src=<%= element.anh %> alt=<%= element.ten %>>

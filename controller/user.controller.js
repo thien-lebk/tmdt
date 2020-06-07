@@ -164,13 +164,17 @@ module.exports.postthemmathang = function (req, res, next) {
 //Them mat hang POST
 module.exports.chitietmathang = function (req, res, next) {
     var name = req.cookies.info.username;
+    var role = "";
 
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
     var id = req.body.id;
 
     var mathang = db.get('MatHang').find({ id: id }).value();
     var chuyenmuc = db.get('Chuyenmuc').value();
 
-    res.render('chitietmathang', { chuyenmuc: chuyenmuc, mathang: mathang, name: name ,role:""});
+    res.render('chitietmathang', { chuyenmuc: chuyenmuc, mathang: mathang, name: name ,role:role});
 
 }
 
@@ -178,7 +182,11 @@ module.exports.chitietmathang = function (req, res, next) {
 //POST trang thanh toan
 module.exports.thanhtoan = function (req, res, next) {
     var name = req.cookies.info.username;
+    var role = "";
 
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
     var id = req.body.id;
     var find = db.get('Chuyenmuc').value();
     var mathang = db.get('MatHang').find({ id: id }).cloneDeep().value();
@@ -192,7 +200,7 @@ module.exports.thanhtoan = function (req, res, next) {
 
     var chuyenmuc = db.get('Chuyenmuc').value();
 
-    res.render('thanhtoan', { chuyenmuc: chuyenmuc, mathang: mathang, name: name, find: find,role:""});
+    res.render('thanhtoan', { chuyenmuc: chuyenmuc, mathang: mathang, name: name, find: find,role:role});
 
 }
 //Xac nhan thanh toan
@@ -203,7 +211,11 @@ module.exports.hoadon = function (req, res, next) {
     var usr = req.cookies.info.username;
     var mathang = db.get('MatHang').find({ id: id }).cloneDeep().value();
     var find = db.get('Chuyenmuc').value();
+    var role = "";
 
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
     // Kiểm tra coi có giá km ko
     var date1 = new Date(mathang.hankm)
     var date2 = new Date()
@@ -215,7 +227,7 @@ module.exports.hoadon = function (req, res, next) {
     var donhang = { id: id, soluongdat: soluongdat, usr: usr, mathang: mathang, }
     console.log(soluongdat);
     
-    res.render('hoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: usr ,soluongdat:soluongdat, find: find,role:""});
+    res.render('hoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: usr ,soluongdat:soluongdat, find: find,role:role});
 }
 //POST xac nhan thanh toan
 module.exports.xacnhanthanhtoan = function (req, res, next) {
@@ -248,14 +260,23 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
         .push(donhang)
         .write()
     var name = req.cookies.info.username;
+    var role = "";
 
-    res.render('thongtinhoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: name,role:"" , find: find});
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
+    res.render('thongtinhoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: name,role:role , find: find});
 }
 
 //GET Lich su giao dich
 module.exports.lichsudathang = function (req, res, next) {
 
     var usr = req.cookies.info.username;
+    var role = "";
+    if(req.cookies.info.username){
+        role = req.cookies.info.username;
+    }
+
     var chuyenmuc = db.get('Chuyenmuc').value();
     var hoadon = db.get('HoaDon')
         .value()
@@ -266,19 +287,23 @@ module.exports.lichsudathang = function (req, res, next) {
         }
     });
 
-    res.render('lichsudathang', { hoadon: danhsach, name: usr });
+    res.render('lichsudathang', { hoadon: danhsach, name: usr,role:role });
 }
 //Post Chi tiet lich su don hang
 module.exports.chitietlichsudonhang = function (req, res, next) {
     var name = req.cookies.info.username;
 
     var idhoadon = req.body.idhoadon;
+    var role = "";
 
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
     var donhang = db.get('HoaDon')
         .find({ idhoadon: idhoadon })
         .value();
 
-    res.render('chitietlichsudonhang', { donhang: donhang, name: name,role:"" });
+    res.render('chitietlichsudonhang', { donhang: donhang, name: name,role:role });
 }
 //Logout
 module.exports.logout = function (req, res, next) {
@@ -309,9 +334,15 @@ module.exports.themgiohang = function (req, res, next) {
 //Xem gio hang
 module.exports.giohang = function (req, res, next) {
     var username = req.cookies.info.username;
+    var role = "";
+
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
+  
     var chuyenmuc = db.get('Chuyenmuc').value();
     var giohang = db.get('GioHang').find({ username: username }).value();
-    res.render('giohang', { chuyenmuc: chuyenmuc, name: username, giohang: giohang });
+    res.render('giohang', { chuyenmuc: chuyenmuc, name: username, giohang: giohang ,role:role});
 }
 
 //Xoa san pham khoi gio
@@ -420,8 +451,16 @@ module.exports.xacnhanthanhtoangiohang = function (req, res, next) {
 
 //Thêm người dùng
 module.exports.themnguoidung = function (req, res, next) {
-   
-    res.render('themnguoidung', {  name:"", username:"",role:"",title:"Thêm người dùng",status:"" });
+    var role = "";
+    var name = ""
+
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
+    if(req.cookies.info.username){
+        name = req.cookies.info.username;
+    }
+    res.render('themnguoidung', {  name:name, username:name,role:role,title:"Thêm người dùng",status:"" });
 }
 module.exports.postthemnguoidung = function (req, res, next) {
     var usr = req.body.usr;
@@ -508,8 +547,12 @@ module.exports.chinhsuamathang = function(req, res, next){
     console.log(sanpham);
 
     var chuyenmuc = db.get('Chuyenmuc').value();
+    var role = "";
 
-    res.render('chinhsuamathang', {title: "Triggered :v", sanpham: sanpham, chuyenmuc: chuyenmuc, name: name, role:""});
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
+    res.render('chinhsuamathang', {title: "Triggered :v", sanpham: sanpham, chuyenmuc: chuyenmuc, name: name, role:role});
 }
 
 module.exports.postchinhsuamathang = function(req, res, next){
@@ -532,7 +575,12 @@ module.exports.postchinhsuamathang = function(req, res, next){
     var find = db.get('Chuyenmuc').value();
     // console.log(dsSanpham);
     // console.log("Params la gi: ", req.params);
-    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find, role:""});
+    var role = "";
+
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
+    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find, role:role});
 }
 
 module.exports.xoasanpham = function(req, res, next){
@@ -552,7 +600,12 @@ module.exports.xoasanpham = function(req, res, next){
     else {
         name = "";
     }
+    var role = "";
+
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
     var dsSanpham = db.get("MatHang").filter({chuyenmuc: chuyenmuc}).value();
     var find = db.get('Chuyenmuc').value();
-    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find, role:""});
+    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find, role:role});
 }
