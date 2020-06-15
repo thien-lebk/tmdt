@@ -4,7 +4,8 @@ const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 var md5 = require('md5');
-var randomid = require('randomid')
+var randomid = require('randomid');
+const { log } = require('debug');
 
 //End of Import lowDB
 //Date time
@@ -272,11 +273,11 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
 module.exports.lichsudathang = function (req, res, next) {
 
     var usr = req.cookies.info.username;
-    var role = "";
+    var role ;
     if(req.cookies.info.username){
-        role = req.cookies.info.username;
+        role = req.cookies.info.role;
     }
-
+    
     var chuyenmuc = db.get('Chuyenmuc').value();
     var hoadon = db.get('HoaDon')
         .value()
@@ -286,7 +287,8 @@ module.exports.lichsudathang = function (req, res, next) {
             danhsach.push(element);
         }
     });
-
+    console.log("role la "+ role);
+    
     res.render('lichsudathang', { hoadon: danhsach, name: usr,role:role });
 }
 //Post Chi tiet lich su don hang
