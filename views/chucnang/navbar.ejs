@@ -1,18 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Navbar tạm thời</a>
+  <a class="navbar-brand" href="/" style="color: red; font-size: 30px; font-weight: bolder;">
+    <img style="height: 50px;" src="/img/nav/nav-logo.png" alt="nav-logo">GNKSDK
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" style="border: 1px solid red;" type="search" placeholder="Search"
+        aria-label="Search">
+      <button class="btn btn-danger my-2 my-sm-0" type="submit"></button>
+    </form>
+    <ul class="navbar-nav mr-auto" style="display: flex; justify-self: end;">
       <% if(name == ""){ %>
-      <li class="nav-item active">
-        <a class="nav-link" href="/dangki">Đăng kí</a>
+      <li class="nav-item active mx-1">
+        <a href="/dangki" class="btn btn-outline-danger" role="button" aria-pressed="true">Đăng kí</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/dangnhap">Đăng nhập</a>
+      <li class="nav-item mx-1">
+        <a class="btn btn-light" href="/dangnhap" role="button" aria-pressed="true">Đăng nhập</a>
       </li>
       </li>
       <% } %>
@@ -35,13 +42,10 @@
       </li>
       <li> <a class="nav-link" href="/giohang">Xem giỏ hàng</a>
       </li>
-      <li> <a class="nav-link" href="/logout">Đăng xuất</a>
+      <li> <a class="btn btn-danger" href="/logout">Đăng xuất</a>
       </li>
       <% } %>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
   </div>
 </nav>

@@ -30,6 +30,16 @@
       "password": "202cb962ac59075b964b07152d234b70",
       "giohang": "S7p4ZVL9",
       "role": "admin"
+    },
+    {
+      "username": "anh",
+      "password": "f0d6e56e9f70f0d5e73580f213e66f15",
+      "giohang": "XMLObZy2"
+    },
+    {
+      "username": "anh2",
+      "password": "3069d6857e12090fb3a5bd3b4a465498",
+      "giohang": "oJbopPkO"
     }
   ],
   "GioHang": [
@@ -86,6 +96,16 @@
     {
       "username": "admin3",
       "idgiohang": "S7p4ZVL9",
+      "mathang": []
+    },
+    {
+      "username": "anh",
+      "idgiohang": "XMLObZy2",
+      "mathang": []
+    },
+    {
+      "username": "anh2",
+      "idgiohang": "oJbopPkO",
       "mathang": []
     }
   ],
@@ -509,6 +529,23 @@
       "thanhtien": "130000",
       "idgiohang": 0,
       "thoigian": "2020-06-07T14:01:34.438Z"
+    },
+    {
+      "idhoadon": "xWGrv6Wn",
+      "magiaodich": "IbwYZxLO",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Ghế game",
+          "id": "LVImo5xl",
+          "soluongdat": "1",
+          "gia": "190000"
+        }
+      ],
+      "thanhtien": 190000,
+      "idgiohang": "oJbopPkO",
+      "thoigian": "2020-06-11T16:21:50.178Z"
     }
   ],
   "MatHang": [
@@ -533,7 +570,8 @@
       "soluong": "150",
       "chuyenmuc": "ghe",
       "giakm": "",
-      "hankm": ""
+      "hankm": "",
+      "soluongdat": 1
     },
     {
       "ten": "Bàn 1",

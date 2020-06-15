@@ -1,51 +1,60 @@
 <!doctype html>
 <html lang="en">
-   <!-- <Header> -->
-    <%- include("chucnang/header.ejs") %>
-    <!-- <End of Header> -->
-  
-    <body>
-        <!-- Navnar -->
-      <%- include("chucnang/navbar.ejs") %>
-        <!-- End of Navnar -->
-    
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">ID hóa đơn<</th>
-          <th scope="col">Hình thức thanh toán</th>
-          <th scope="col">Mã giao dịch</th>
-          <th scope="col">Số tiền</th>
-          <th scope="col">Thời gian đặt</th>
-          <th scope="col">Chi tiết</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% hoadon.forEach(element => { %>
-          <tr>
-          <th scope="row"></th>
-          <td><%= element.idhoadon %></td>
-          <td><%= element.thanhtoan %></td>
-          <td><%= element.magiaodich %></td>
-          <td><%= element.thanhtien %></td>
-          <td><%= new Date(element.thoigian).toLocaleString() %></td>
-          <td><form action="chitietlichsudonhang" method="post">
+<!-- <Header> -->
+<%- include("chucnang/header.ejs") %>
+<!-- <End of Header> -->
 
-        <input type="hidden" name="idhoadon" value=<%= element.idhoadon %>>
-          <button type="submit">Xem chi tiết</button>
-          </form></td>
-        </tr>
-        <%  }); %>
+<body>
+  <!-- Navnar -->
+  <%- include("chucnang/navbar.ejs") %>
+  <!-- End of Navnar -->
 
-      </tbody>
-    </table>
-        
-  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID hóa đơn</th>
+        <th scope="col">Hình thức thanh toán</th>
+        <th scope="col">Mã giao dịch</th>
+        <th scope="col">Số tiền</th>
+        <th scope="col">Thời gian đặt</th>
+        <th scope="col">Chi tiết</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% hoadon.forEach(element => { %>
+      <tr>
+        <th scope="row"></th>
+        <td><%= element.idhoadon %></td>
+        <td><%= element.thanhtoan %></td>
+        <td><%= element.magiaodich %></td>
+        <td><%= element.thanhtien %></td>
+        <td><%= new Date(element.thoigian).toLocaleString() %></td>
+        <td>
+          <form action="chitietlichsudonhang" method="post">
+
+            <input type="hidden" name="idhoadon" value=<%= element.idhoadon %>>
+            <button type="submit">Xem chi tiết</button>
+          </form>
+        </td>
+      </tr>
+      <%  }); %>
+
+    </tbody>
+  </table>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
