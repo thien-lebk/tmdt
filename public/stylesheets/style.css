@@ -1,8 +1,11 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/* nav */
 
-a {
-  color: #00B7FF;
+/* .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+} */
+
+.nav-dropdown-item:hover {
+  text-decoration: underline;
+  transition: all 0.5s ease;
 }
