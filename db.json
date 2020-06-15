@@ -91,7 +91,20 @@
     {
       "username": "guest",
       "idgiohang": "5L2n48nI",
-      "mathang": []
+      "mathang": [
+        {
+          "ten": "Ghế 2",
+          "id": "onyCct5Q",
+          "mota": "Ghế đẹp nữa nè",
+          "gia": "150000",
+          "anh": "https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "soluong": "100",
+          "chuyenmuc": "ghe",
+          "giakm": "130000",
+          "hankm": "2020-07-07",
+          "soluongdat": "1"
+        }
+      ]
     },
     {
       "username": "admin3",
