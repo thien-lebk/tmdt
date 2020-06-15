@@ -268,7 +268,7 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
     }
     res.render('thongtinhoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: name,role:role , find: find});
 }
-
+//Test
 //GET Lich su giao dich
 module.exports.lichsudathang = function (req, res, next) {
 
