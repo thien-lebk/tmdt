@@ -108,7 +108,7 @@ module.exports.themchuyenmuc = function (req, res, next) {
     var role = "";
     if( req.cookies.info.role){
         role = req.cookies.info.role;
-        res.render('themchuyenmuc', { title: 'Express', status: '', name: name,role:role });
+        res.render('themchuyenmuc', { title: 'Thêm chuyên mục', status: '', name: name,role:role });
     } else {
         res.redirect('/');
     }
@@ -582,7 +582,8 @@ module.exports.postchinhsuamathang = function(req, res, next){
     if(req.cookies.info.role){
         role = req.cookies.info.role;
     }
-    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find, role:role});
+    // res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find, role:role});
+    res.redirect('/');
 }
 
 module.exports.xoasanpham = function(req, res, next){

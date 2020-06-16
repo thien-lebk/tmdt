@@ -162,6 +162,16 @@
       "ten": "P&ID",
       "id": "fbrhSnUS",
       "url": ""
+    },
+    {
+      "ten": "Kỹ thuật",
+      "id": "nZtyFBnA",
+      "url": ""
+    },
+    {
+      "ten": "CNTTNC",
+      "id": "8z9xUPRe",
+      "url": ""
     }
   ],
   "HoaDon": [
@@ -797,6 +807,33 @@
       "thanhtien": 600000,
       "idgiohang": "ve6aLwBh",
       "thoigian": "2020-06-16T11:28:13.292Z"
+    },
+    {
+      "idhoadon": "aWI31dwY",
+      "magiaodich": "zWgk790A",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [],
+      "thanhtien": 0,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-16T14:55:43.903Z"
+    },
+    {
+      "idhoadon": "IsbfIuSX",
+      "magiaodich": "UtYbeCG6",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Bàn 1tttttttttttt",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T16:13:16.595Z"
     }
   ],
   "MatHang": [
@@ -813,7 +850,7 @@
       "soluongdat": 1
     },
     {
-      "ten": "Ghế game",
+      "ten": "Ghế game cc",
       "id": "LVImo5xl",
       "mota": "Không đẹp nè",
       "gia": "190000",
@@ -825,7 +862,7 @@
       "soluongdat": 1
     },
     {
-      "ten": "Bàn 1",
+      "ten": "Bàn 1tttttttttttt",
       "id": "GP4mRNlm",
       "mota": "Bàn đẹp nè",
       "gia": "500000",

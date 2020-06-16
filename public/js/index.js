@@ -144,6 +144,39 @@ $(document).ready(function(){
   });
 });
 
+
+
+$(document).ready(function(){
+  $(".product-items-2").owlCarousel({
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      responsive : {
+        // breakpoint from 0 up
+        0 : {
+          items:1,
+            
+        },
+        // breakpoint from 480 up
+        500 : {
+          items:2,
+            
+        },
+        // breakpoint from 768 up
+        950 : {
+          items:4,
+            
+        }
+      },
+      autoHeight:false,
+      loop:false,
+      autoplay:true,
+      autoplayTimeout:4000,
+      dots:false,
+      lazyLoad:false,
+      slideBy:1,
+  });
+});
+
 // demo chuyen hinh=============================================================================
 var slideIndex = 1;
 showSlides(slideIndex);
