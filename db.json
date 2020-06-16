@@ -51,42 +51,7 @@
     {
       "username": "admin2",
       "idgiohang": "ve6aLwBh",
-      "mathang": [
-        {
-          "ten": "Ghế 2",
-          "id": "onyCct5Q",
-          "mota": "Ghế đẹp nữa nè",
-          "gia": "150000",
-          "anh": "https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-          "soluong": "100",
-          "chuyenmuc": "ghe",
-          "giakm": "130000",
-          "hankm": "2020-07-07",
-          "soluongdat": "1"
-        },
-        {
-          "ten": "Bàn 1",
-          "id": "GP4mRNlm",
-          "mota": "Bàn đẹp nè",
-          "gia": "500000",
-          "anh": "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-          "soluong": "120",
-          "chuyenmuc": "Bàn",
-          "soluongdat": "1"
-        },
-        {
-          "ten": "Chair nè",
-          "id": "woTukjEX",
-          "mota": "không có gi",
-          "gia": "600000",
-          "anh": "https://images.unsplash.com/photo-1562113530-57ba467cea38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-          "soluong": "120",
-          "chuyenmuc": "123",
-          "giakm": "350000",
-          "hankm": "2020-06-05",
-          "soluongdat": "1"
-        }
-      ]
+      "mathang": []
     },
     {
       "username": "guest",
@@ -154,13 +119,48 @@
       "url": "ban"
     },
     {
-      "ten": "",
-      "id": "fbtcs7DF",
+      "ten": "text",
+      "id": "gG6QI3Rx",
       "url": ""
     },
     {
-      "ten": "text",
-      "id": "gG6QI3Rx",
+      "ten": "Thiết kế",
+      "id": "tMzAktFC",
+      "url": ""
+    },
+    {
+      "ten": "PCCC",
+      "id": "U9JwaYbN",
+      "url": ""
+    },
+    {
+      "ten": "ĐỒ HỌA",
+      "id": "asGnkVVv",
+      "url": ""
+    },
+    {
+      "ten": "CNTT",
+      "id": "N7Wu4yA8",
+      "url": ""
+    },
+    {
+      "ten": "Y TẾ",
+      "id": "rJQMY02o",
+      "url": ""
+    },
+    {
+      "ten": "DẦU KHÍ",
+      "id": "bnsg8FiM",
+      "url": ""
+    },
+    {
+      "ten": "ĐƯỜNG ỐNG",
+      "id": "nyLM404x",
+      "url": ""
+    },
+    {
+      "ten": "P&ID",
+      "id": "fbrhSnUS",
       "url": ""
     }
   ],
@@ -569,6 +569,29 @@
       "thanhtien": 190000,
       "idgiohang": "oJbopPkO",
       "thoigian": "2020-06-11T16:21:50.178Z"
+    },
+    {
+      "idhoadon": "b5t9pP8d",
+      "magiaodich": "ecqX1z7U",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế 2",
+          "id": "onyCct5Q",
+          "soluongdat": 1,
+          "gia": "130000"
+        },
+        {
+          "ten": "Bàn 1",
+          "id": "GP4mRNlm",
+          "soluongdat": 1,
+          "gia": "500000"
+        }
+      ],
+      "thanhtien": 630000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-16T09:01:52.913Z"
     }
   ],
   "MatHang": [
