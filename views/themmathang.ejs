@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <!-- <Header> -->
-      <%- include("chucnang/header.ejs") %>
-      <!-- <End of Header> -->
-    
-      <body>
-          <!-- Navnar -->
-        <%- include("chucnang/navbar.ejs") %>
-          <!-- End of Navnar -->
+<!-- <Header> -->
+<%- include("chucnang/header.ejs") %>
+<!-- <End of Header> -->
+
+<body>
+  <%- include("chucnang/navbar.ejs") %>
+  <!-- End of Navnar -->
+  <!-- Navnar -->
+  <div class="container">
+
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <form method="POST" action="/themmathang">
@@ -30,13 +32,16 @@
         <select name="chuyenmuc" id="chuyenmuc">
           <!-- Su dung forEach -->
           <%  chuyenmuc.forEach(element => { %>
-            <option value= <%= element.ten %>> <%= element.ten %></option>
-       <% }); %>
-          
+          <option value=<%= element.ten %>> <%= element.ten %></option>
+          <% }); %>
+
         </select>
       </div>
-     
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-  </body>
+  </div>
+
+</body>
+
 </html>
