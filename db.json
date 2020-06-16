@@ -592,6 +592,35 @@
       "thanhtien": 630000,
       "idgiohang": "ve6aLwBh",
       "thoigian": "2020-06-16T09:01:52.913Z"
+    },
+    {
+      "idhoadon": "6ayZp8sA",
+      "magiaodich": "sw6BGxw2",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Chair nè",
+          "id": "woTukjEX",
+          "soluongdat": 1,
+          "gia": "600000"
+        },
+        {
+          "ten": "Ghế game",
+          "id": "LVImo5xl",
+          "soluongdat": 1,
+          "gia": "190000"
+        },
+        {
+          "ten": "Bàn game",
+          "id": "m0820HIz",
+          "soluongdat": 1,
+          "gia": "900000"
+        }
+      ],
+      "thanhtien": 1690000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-16T10:37:13.964Z"
     }
   ],
   "MatHang": [
@@ -640,7 +669,8 @@
       "soluong": "50",
       "chuyenmuc": "Bàn",
       "giakm": "",
-      "hankm": ""
+      "hankm": "",
+      "soluongdat": 1
     },
     {
       "ten": "Chair nè",

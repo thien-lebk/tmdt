@@ -9,17 +9,12 @@
         <!-- Navnar -->
       <%- include("chucnang/navbar.ejs") %>
         <!-- End of Navnar -->
-        <ul>
-          <p>Danh mục</p>
-          <%  find.forEach(element => { %>
-            <li><a href=<%= "danhmuc/" + element.ten %> > <%= element.ten %></a></li>
-    
-          <% }); %>
-        </ul>
+        <div class="container mb-5">
   
 
-    <p>Thông tin đơn hàng</p>
-<p>Tổng số tiền: <%= tongtien %>  </p>
+    
+<p style="font-size: 36px;" class="price">Tổng số tiền: <%= tongtien %> đ </p>
+<br>
   <form action="xacnhanthanhtoangiohang" method="post">
     <input type="hidden" name="idgiohang" value="<%= giohang.idgiohang %>">
     <label>Hình thức thanh toán</label>
@@ -29,11 +24,15 @@
         <option value= "vnpay" >VNPAY</option>
         <option value= "ether" >Ether</option>
     </select>
-    <button type="submit" class="btn btn-success">Xác nhận</button>
+    <br>
+    <button type="submit" class="btn btn-lg btn-success my-4">Xác nhận</button>
 
   </form>
+  <div style="padding-bottom: 30px;">
+    <h4 style="color: red;"><strong>DANH SÁCH SẢN PHẨM</strong></h4>
+  </div>
   <% giohang.mathang.forEach(mathang => { %>
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem; margin-bottom: 40px;">
     <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
     <div class="card-body">
       <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
@@ -44,21 +43,9 @@
     </div>
   </div>
   <% }); %>
-
-  <script>
-    
-  </script>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+</div>
+  <%- include("chucnang/footer.ejs") %>
+  
 </body>
 
 </html>
