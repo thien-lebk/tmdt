@@ -601,11 +601,7 @@
       "id": "GP4mRNlm",
       "mota": "Bàn đẹp nè",
       "gia": "500000",
-<<<<<<< HEAD
       "anh": "/img/img_products/300x300.jpg",
-=======
-      "anh": "img/img_products/test.img",
->>>>>>> 9b366a1d4abc657184b9e133069eae2eb34592a6
       "soluong": "120",
       "chuyenmuc": "Bàn",
       "soluongdat": 1,
@@ -617,15 +613,7 @@
       "id": "m0820HIz",
       "mota": "Bàn ko đẹp nè",
       "gia": "900000",
-<<<<<<< HEAD
       "anh": "/img/img_products/300x300.jpg",
-=======
-<<<<<<< HEAD
-      "anh": "/img/img_products/300x300.jpg",
-=======
-      "anh": "public/img/img_products/300x300.jpg",
->>>>>>> 9b366a1d4abc657184b9e133069eae2eb34592a6
->>>>>>> 4a3352cc042f6a34e70fce5b03f30c370f11ab32
       "soluong": "50",
       "chuyenmuc": "Bàn",
       "giakm": "",
