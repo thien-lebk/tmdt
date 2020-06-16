@@ -592,6 +592,346 @@
       "thanhtien": 630000,
       "idgiohang": "ve6aLwBh",
       "thoigian": "2020-06-16T09:01:52.913Z"
+    },
+    {
+      "idhoadon": "4SNmPllm",
+      "magiaodich": "byikoPDH",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T09:19:18.025Z"
+    },
+    {
+      "idhoadon": "nH01BLwr",
+      "magiaodich": "pRSFk4Uz",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:09:00.068Z"
+    },
+    {
+      "idhoadon": "C587OXt0",
+      "magiaodich": "gFeQlZc9",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:13:28.621Z"
+    },
+    {
+      "idhoadon": "EmCTWrtL",
+      "magiaodich": "MVNdVSbV",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:13:31.006Z"
+    },
+    {
+      "idhoadon": "4cxQfUrS",
+      "magiaodich": "VJZcf05T",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:13:56.005Z"
+    },
+    {
+      "idhoadon": "RCZRe4oV",
+      "magiaodich": "H9Nvx5LS",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:15:39.271Z"
+    },
+    {
+      "idhoadon": "07mBruOM",
+      "magiaodich": "w0DagHZN",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:15:48.457Z"
+    },
+    {
+      "idhoadon": "kNZiJ5Wg",
+      "magiaodich": "8ZNF8akE",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:16:13.679Z"
+    },
+    {
+      "idhoadon": "xDhUSRH1",
+      "magiaodich": "eoY0sbO4",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:16:16.242Z"
+    },
+    {
+      "idhoadon": "sn1W851d",
+      "magiaodich": "93DZydDY",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:16:52.175Z"
+    },
+    {
+      "idhoadon": "LQcSFyOy",
+      "magiaodich": "fiZkP5rq",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:17:05.330Z"
+    },
+    {
+      "idhoadon": "NISxBIQv",
+      "magiaodich": "iruHIzoc",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:17:12.758Z"
+    },
+    {
+      "idhoadon": "v64BPSc8",
+      "magiaodich": "MloxsjhD",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:17:25.577Z"
+    },
+    {
+      "idhoadon": "i3Iy9fmz",
+      "magiaodich": "v6v2l3jQ",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:26:12.866Z"
+    },
+    {
+      "idhoadon": "hmrk8PiO",
+      "magiaodich": "0fvOffTY",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:28:01.521Z"
+    },
+    {
+      "idhoadon": "xaqCIMxm",
+      "magiaodich": "pTX7Awx8",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:28:14.906Z"
+    },
+    {
+      "idhoadon": "Xh7rWii2",
+      "magiaodich": "Itc4VROT",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:28:38.945Z"
+    },
+    {
+      "idhoadon": "Inznn51d",
+      "magiaodich": "8VTgLlWV",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:28:54.448Z"
+    },
+    {
+      "idhoadon": "Ju5E79LQ",
+      "magiaodich": "viNygz4e",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:29:03.145Z"
+    },
+    {
+      "idhoadon": "1IXWa5L7",
+      "magiaodich": "rw5ZCY5O",
+      "thanhtoan": "momo",
+      "usr": "anh2",
+      "hang": [
+        {
+          "ten": "Bàn 1",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-16T10:29:12.421Z"
     }
   ],
   "MatHang": [

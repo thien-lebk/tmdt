@@ -1,49 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <!-- <Header> -->
-    <%- include("chucnang/header.ejs") %>
-    <!-- <End of Header> -->
-  
-    <body>
-        <!-- Navnar -->
-      <%- include("chucnang/navbar.ejs") %>
-        <!-- End of Navnar -->
-        <ul>
-          <p>Danh mục</p>
-          <%  find.forEach(element => { %>
-            <li><a href=<%= "danhmuc/" + element.ten %> > <%= element.ten %></a></li>
-    
-          <% }); %>
-        </ul>
+<!-- <Header> -->
+<%- include("chucnang/header.ejs") %>
+<!-- <End of Header> -->
 
-  <p>Hóa đơn thanh toán</p>
-
-  <div class="card" style="width: 18rem;">
-   <p>User: <%= donhang.usr %></p>
-   <p>ID hóa đơn: <%= donhang.idhoadon %></p>
-   <p>Hình thức thanh toán: <%= donhang.thanhtoan %></p>
-   <p>Mã giao dịch: <%= donhang.magiaodich %></p>
-   <p>Số tiền: <%= donhang.thanhtien %></p>
-   <p>Thời gian mua: <%= donhang.thoigian %>đ</p>
-
+<body>
+  <!-- Navnar -->
+  <%- include("chucnang/navbar.ejs") %>
+  <!-- End of Navnar -->
+  <div class="container">
+    <div style="padding-top: 50px; padding-bottom: 30px;">
+      <h4 style="color: red;"><strong>DANH MỤC</strong></h4>
     </div>
+    <div class="owl-carousel owl-theme margin-items outer-center-vertical-brand" id="key-items"
+      style="width: 100%; height: 50%;">
+      <%  find.forEach(element => { %>
+      <button class="btn btn-outline-danger btn-lg"><a style="color: inherit; font-weight: 600; text-decoration: none;"
+          href=<%= "danhmuc/" + element.ten %>> <%= element.ten %></a></button>
+      <% }); %>
+    </div>
+  </div>
+  <div class="container text-center mt-5">
+
+    <p>Hóa đơn thanh toán</p>
+
+    <!-- <div class="card mx-auto" style="width: 18rem;">
+      <p>User: <%= donhang.usr %></p>
+      <p>ID hóa đơn: <%= donhang.idhoadon %></p>
+      <p>Hình thức thanh toán: <%= donhang.thanhtoan %></p>
+      <p>Mã giao dịch: <%= donhang.magiaodich %></p>
+      <p>Số tiền: <%= donhang.thanhtien %></p>
+      <p>Thời gian mua: <%= donhang.thoigian %>đ</p>
+    </div> -->
+    <table class="table table-striped w-50 text-left mx-auto">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <td>User:</td>
+          <td><%= donhang.usr %></td>
+        </tr>
+        <tr>
+          <td>ID hóa đơn:</td>
+          <td><%= donhang.idhoadon %></td>
+        </tr>
+        <tr>
+          <td>Hình thức thanh toán:</td>
+          <td><%= donhang.thanhtoan %></td>
+        </tr>
+        <tr>
+          <td>Mã giao dịch:</td>
+          <td><%= donhang.magiaodich %></td>
+        </tr>
+        <tr>
+          <td>Số tiền:</td>
+          <td><%= donhang.thanhtien %> đ</td>
+        </tr>
+        <tr>
+          <td>Thời gian mua:</td>
+          <td><%= donhang.thoigian %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   </div>
 
 
+
+
+
   <script>
-    
+
   </script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+
 </body>
 
 </html>

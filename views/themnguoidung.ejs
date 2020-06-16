@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <!-- <Header> -->
-      <%- include("chucnang/header.ejs") %>
-      <!-- <End of Header> -->
-    
-      <body>
-          <!-- Navnar -->
-        <%- include("chucnang/navbar.ejs") %>
-          <!-- End of Navnar -->
+<!-- <Header> -->
+<%- include("chucnang/header.ejs") %>
+<!-- <End of Header> -->
+
+<body>
+  <!-- Navnar -->
+  <%- include("chucnang/navbar.ejs") %>
+  <!-- End of Navnar -->
+
+
+  <!-- Them nguoi dung -->
+  <div class="container-sm text-center mt-5">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <h1> <%= status %> </h1>
     <form method="POST" action="/themnguoidung">
       <div class="form-group">
-        <label for="">User name</label>
-        <input type="text" name="usr" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter usr">
-        <input type="password" name="pass" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter pass">
-        <label for="inputState">State</label>
+        <input type="text" name="usr" class="form-control mt-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Username">
+        <input type="password" name="pass" class="form-control mt-3" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="Password">
+        <br>
+        <label for="inputState" class="font-weight-bold">Phân loại người dùng</label>
         <select id="role" name="role" class="form-control">
-          <label for="inputState">Chọn quyền</label>
           <option value="" selected>Người dùng bình thường</option>
           <option value="admin" select>Admin</option>
 
         </select>
       </div>
-     
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-  </body>
+  </div>
+  <!-- end them nguoi dung -->
+
+</body>
+
 </html>
