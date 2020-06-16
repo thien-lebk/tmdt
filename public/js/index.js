@@ -102,15 +102,14 @@ $(document).ready(function(){
       margin:10,
       animateOut: 'fadeOut',
       animateIn: 'fadeIn',
-      items:8,
       autoHeight:true,
       autoWidth:true,
-      loop:true,
-      autoplay:true,
+      loop:false,
+      autoplay:false,
       autoplayTimeout:4000,
       dots:false,
       lazyLoad:false,
-      slideBy:1,
+      slideBy:2,
   });
 });
 

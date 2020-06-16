@@ -154,13 +154,48 @@
       "url": "ban"
     },
     {
-      "ten": "",
-      "id": "fbtcs7DF",
+      "ten": "text",
+      "id": "gG6QI3Rx",
       "url": ""
     },
     {
-      "ten": "text",
-      "id": "gG6QI3Rx",
+      "ten": "Thiết kế",
+      "id": "tMzAktFC",
+      "url": ""
+    },
+    {
+      "ten": "PCCC",
+      "id": "U9JwaYbN",
+      "url": ""
+    },
+    {
+      "ten": "ĐỒ HỌA",
+      "id": "asGnkVVv",
+      "url": ""
+    },
+    {
+      "ten": "CNTT",
+      "id": "N7Wu4yA8",
+      "url": ""
+    },
+    {
+      "ten": "Y TẾ",
+      "id": "rJQMY02o",
+      "url": ""
+    },
+    {
+      "ten": "DẦU KHÍ",
+      "id": "bnsg8FiM",
+      "url": ""
+    },
+    {
+      "ten": "ĐƯỜNG ỐNG",
+      "id": "nyLM404x",
+      "url": ""
+    },
+    {
+      "ten": "P&ID",
+      "id": "fbrhSnUS",
       "url": ""
     }
   ],
@@ -601,11 +636,7 @@
       "id": "GP4mRNlm",
       "mota": "Bàn đẹp nè",
       "gia": "500000",
-<<<<<<< HEAD
       "anh": "/img/img_products/300x300.jpg",
-=======
-      "anh": "img/img_products/test.img",
->>>>>>> 9b366a1d4abc657184b9e133069eae2eb34592a6
       "soluong": "120",
       "chuyenmuc": "Bàn",
       "soluongdat": 1,
@@ -617,11 +648,7 @@
       "id": "m0820HIz",
       "mota": "Bàn ko đẹp nè",
       "gia": "900000",
-<<<<<<< HEAD
       "anh": "/img/img_products/300x300.jpg",
-=======
-      "anh": "public/img/img_products/300x300.jpg",
->>>>>>> 9b366a1d4abc657184b9e133069eae2eb34592a6
       "soluong": "50",
       "chuyenmuc": "Bàn",
       "giakm": "",
