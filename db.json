@@ -152,6 +152,16 @@
       "ten": "Bàn",
       "id": "CaEcdk3d",
       "url": "ban"
+    },
+    {
+      "ten": "",
+      "id": "fbtcs7DF",
+      "url": ""
+    },
+    {
+      "ten": "text",
+      "id": "gG6QI3Rx",
+      "url": ""
     }
   ],
   "HoaDon": [
@@ -579,7 +589,7 @@
       "id": "LVImo5xl",
       "mota": "Không đẹp nè",
       "gia": "190000",
-      "anh": "https://images.unsplash.com/photo-1574189555774-7cbcd66d0fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
       "soluong": "150",
       "chuyenmuc": "ghe",
       "giakm": "",
@@ -591,19 +601,23 @@
       "id": "GP4mRNlm",
       "mota": "Bàn đẹp nè",
       "gia": "500000",
-      "anh": "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "anh": "img/img_products/test.img",
       "soluong": "120",
       "chuyenmuc": "Bàn",
-      "soluongdat": 1
+      "soluongdat": 1,
+      "giakm": "",
+      "hankm": ""
     },
     {
       "ten": "Bàn game",
       "id": "m0820HIz",
       "mota": "Bàn ko đẹp nè",
       "gia": "900000",
-      "anh": "https://images.unsplash.com/photo-1570993492881-25240ce854f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1328&q=80",
+      "anh": "public/img/img_products/300x300.jpg",
       "soluong": "50",
-      "chuyenmuc": "Bàn"
+      "chuyenmuc": "Bàn",
+      "giakm": "",
+      "hankm": ""
     },
     {
       "ten": "Chair nè",
@@ -628,6 +642,17 @@
       "giakm": "19999999",
       "hankm": "2020-06-11",
       "soluongdat": 1
+    },
+    {
+      "ten": "test",
+      "id": "jkkr9WXV",
+      "mota": "test",
+      "gia": "200000",
+      "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
+      "soluong": "10",
+      "chuyenmuc": "test2",
+      "giakm": "150000",
+      "hankm": "2020-06-17"
     }
   ]
 }

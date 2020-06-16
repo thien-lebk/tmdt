@@ -8,19 +8,23 @@
         <!-- Navnar -->
       <%- include("chucnang/navbar.ejs") %>
         <!-- End of Navnar -->
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <h1> <%= status %> </h1>
-    <form method="POST" action="/themchuyenmuc">
-      <div class="form-group">
-        <label for="">Tên chuyên mục</label>
-        <input type="text" name="ten" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter usr">
-        <label for="">URL chuyên mục</label>
-        <input type="text" name="url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter usr">
-
-      </div>
-     
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <div class="container">
+          <h1 style="color: rgb(224, 51, 51);"><%= title %></h1>
+          <p>Welcome to <%= title %></p>
+          <h1> <%= status %> </h1>
+          <div style="text-align: center;">
+            <form method="POST" action="/themchuyenmuc">
+              <div class="form-group">
+                <label style="font-size: 24px; font-weight: 500; color: rgb(224, 51, 51); margin-bottom: 20px;" for="">Tên chuyên mục</label>
+                <input type="text" name="ten" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ví dụ: PCCC">
+                <label style="font-size: 24px; font-weight: 500; color: rgb(224, 51, 51);margin-top: 20px; margin-bottom: 20px;" for="">URL chuyên mục</label>
+                <input type="text" name="url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter url">
+              </div>
+              <button style="margin-top: 20px;" type="submit" class="btn btn-outline-danger">Submit</button>
+            </form>
+          </div>
+          
+        </div>
+    
   </body>
 </html>
