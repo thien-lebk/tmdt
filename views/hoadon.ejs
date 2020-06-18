@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<!-- <Header> -->
+<%- include("chucnang/header.ejs") %>
+<!-- <End of Header> -->
+
+<body>
+  <!-- Navnar -->
+  <%- include("chucnang/navbar.ejs") %>
+  <!-- End of Navnar -->
+  <div class="container mt-5 mb-5">
+    
+    <div style=" padding-bottom: 30px;">
+      <h4 style="color: red;"><strong>THÔNG TIN ĐƠN HÀNG</strong></h4>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
+      <div class="card-body">
+        <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
+        <p> Mô tả: <%= mathang.mota %></p>
+        <P>Số lượng <%= soluongdat %></p>
+        <p class="card-text">Thành tiền: <%= mathang.gia*soluongdat %>đ</p>
+        <form action="xacnhanthanhtoan" method="post">
+          <input type="hidden" name="ten" value=<%= mathang.ten %>>
+          <input type="hidden" name="anh" value=<%= mathang.anh %>>
+          <input type="hidden" name="mota" value=<%= mathang.mota %>>
+          <input type="hidden" name="id" value=<%= mathang.id %>>
+          <input type="hidden" name="soluongdat" value=<%= soluongdat %>>
+          <input type="hidden" id="thanhtien" name="thanhtien" value=<%= mathang.gia*soluongdat %>>
+          <label>Hình thức thanh toán</label>
+          <select name="thanhtoan" id="thanhtoan">
+            <!-- Su dung forEach -->
+            <option value="momo"> Momo</option>
+            <option value="vnpay">VNPAY</option>
+            <option value="ether">Ether</option>
+          </select>
+          
+          <div style="text-align: center;">
+            <button class="btn btn-outline-success mt-2" type="submit">Xác nhận</button>
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+  
+
+  <%- include("chucnang/footer.ejs") %>
+</body>
+
+</html>

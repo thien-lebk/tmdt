@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<!-- <Header> -->
+<%- include("chucnang/header.ejs") %>
+<!-- <End of Header> -->
+
+<body>
+  <!-- Navnar -->
+  <%- include("chucnang/navbar.ejs") %>
+  <!-- End of Navnar -->
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ID hóa đơn</th>
+        <th scope="col">Hình thức thanh toán</th>
+        <th scope="col">Mã giao dịch</th>
+        <th scope="col">Số tiền</th>
+        <th scope="col">Thời gian đặt</th>
+        <th scope="col">Chi tiết</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% hoadon.forEach(element => { %>
+      <tr>
+        <th scope="row"></th>
+        <td><%= element.idhoadon %></td>
+        
+        <td><%= element.thanhtoan %></td>
+        <td><%= element.magiaodich %></td>
+        <td><%= element.thanhtien %></td>
+        <td><%= new Date(element.thoigian).toLocaleString() %></td>
+        <td>
+          <form action="donhangchuathanhtoan" method="post">
+
+            <input type="hidden" name="idhoadon" value=<%= element.idhoadon %>>
+            <button type="submit">Thanh toán</button>
+          </form>
+        </td>
+      </tr>
+      <%  }); %>
+
+    </tbody>
+  </table>
+  <%- include("chucnang/footer.ejs") %>
+</body>
+
+</html>

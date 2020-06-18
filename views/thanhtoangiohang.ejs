@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+  <!-- <Header> -->
+    <%- include("chucnang/header.ejs") %>
+    <!-- <End of Header> -->
+  
+    <body>
+        <!-- Navnar -->
+      <%- include("chucnang/navbar.ejs") %>
+        <!-- End of Navnar -->
+        <div class="container mb-5">
+  
+
+    
+<p style="font-size: 36px;" class="price">Tổng số tiền: <%= tongtien %> đ </p>
+<br>
+  <form action="xacnhanthanhtoangiohang" method="post">
+    <input type="hidden" name="idgiohang" value="<%= giohang.idgiohang %>">
+    <label>Hình thức thanh toán</label>
+    <select name="thanhtoan" id="thanhtoan">
+      <!-- Su dung forEach -->
+        <option value= "momo" > Momo</option>
+        <option value= "vnpay" >VNPAY</option>
+        <option value= "ether" >Ether</option>
+    </select>
+    <br>
+    <button type="submit" class="btn btn-lg btn-success my-4">Xác nhận</button>
+
+  </form>
+  <div style="padding-bottom: 30px;">
+    <h4 style="color: red;"><strong>DANH SÁCH SẢN PHẨM</strong></h4>
+  </div>
+  <% giohang.mathang.forEach(mathang => { %>
+  <div class="card" style="width: 18rem; margin-bottom: 40px;">
+    <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
+    <div class="card-body">
+      <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
+      <p> Mô tả: <%= mathang.mota %></p>
+      <P>Số lượng <%= mathang.soluongdat %></p>
+      <p class="card-text">Thành tiền: <%= mathang.gia*mathang.soluongdat %>đ</p>
+     
+    </div>
+  </div>
+  <% }); %>
+</div>
+  <%- include("chucnang/footer.ejs") %>
+  
+</body>
+
+</html>
