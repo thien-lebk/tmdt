@@ -51,32 +51,7 @@
     {
       "username": "admin2",
       "idgiohang": "ve6aLwBh",
-      "mathang": [
-        {
-          "ten": "Bàn 1tttttttttttt",
-          "id": "GP4mRNlm",
-          "mota": "Bàn đẹp nè",
-          "gia": "500000",
-          "anh": "/img/img_products/300x300.jpg",
-          "soluong": "120",
-          "chuyenmuc": "Bàn",
-          "soluongdat": 1,
-          "giakm": "",
-          "hankm": ""
-        },
-        {
-          "ten": "Ghế game cc",
-          "id": "LVImo5xl",
-          "mota": "Không đẹp nè",
-          "gia": "190000",
-          "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
-          "soluong": "150",
-          "chuyenmuc": "ghe",
-          "giakm": "",
-          "hankm": "",
-          "soluongdat": 1
-        }
-      ]
+      "mathang": []
     },
     {
       "username": "guest",
@@ -1250,6 +1225,102 @@
       "idgiohang": 0,
       "thoigian": "2020-06-23T08:51:57.075Z",
       "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "nyY4p24f",
+      "magiaodich": "ehkSYGNv",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Bàn 1tttttttttttt",
+          "id": "GP4mRNlm",
+          "soluongdat": 1,
+          "gia": "500000"
+        },
+        {
+          "ten": "Ghế game cc",
+          "id": "LVImo5xl",
+          "soluongdat": 1,
+          "gia": "190000"
+        }
+      ],
+      "thanhtien": 690000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-23T13:34:59.057Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "HDbGVGfT",
+      "magiaodich": "hq3FSYTA",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế 2",
+          "id": "onyCct5Q",
+          "soluongdat": 1,
+          "gia": "130000"
+        }
+      ],
+      "thanhtien": 130000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-23T14:15:43.128Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "MIeEgNtJ",
+      "magiaodich": "1y8l1URe",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Macbook",
+          "gia": "23000000",
+          "id": "Zlkr9Rmt",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "23000000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T15:27:49.439Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "YbDRWdCl",
+      "magiaodich": "EYM94MgO",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Macbook",
+          "gia": "23000000",
+          "id": "Zlkr9Rmt",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "23000000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T15:51:31.944Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "tHL4gx6P",
+      "magiaodich": "kjr42zsu",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Bitcoin Item",
+          "gia": "0.15",
+          "id": "1234567999999",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "0.15",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T17:41:16.324Z",
+      "trangthai": "dathanhtoan"
     }
   ],
   "MatHang": [
@@ -1335,6 +1406,18 @@
       "chuyenmuc": "test2",
       "giakm": "150000",
       "hankm": "2020-06-17",
+      "soluongdat": 1
+    },
+    {
+      "ten": "Bitcoin Item",
+      "id": "1234567999999",
+      "mota": "Mua bang ether",
+      "gia": "0.2",
+      "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
+      "soluong": "10",
+      "chuyenmuc": "test2",
+      "giakm": "0.15",
+      "hankm": "2020-06-25",
       "soluongdat": 1
     }
   ]

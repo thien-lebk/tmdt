@@ -267,140 +267,225 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
     var idhoadon = randomid();
     var magiaodich = randomid();
     var usr = req.cookies.info.username;
-if(thanhtoan=='vnpay'){
-    //Qua trang sandbox VNPAY
-     
-    var ipAddr = req.headers['x-forwarded-for'] ||
-        req.connection.remoteAddress ||
-        req.socket.remoteAddress ||
-        req.connection.socket.remoteAddress;
+    if(thanhtoan=='vnpay'){
+        //Qua trang sandbox VNPAY
+        
+        var ipAddr = req.headers['x-forwarded-for'] ||
+            req.connection.remoteAddress ||
+            req.socket.remoteAddress ||
+            req.connection.socket.remoteAddress;
 
-    var config = require('config');
-    var dateFormat = require('dateformat');
+        var config = require('config');
+        var dateFormat = require('dateformat');
 
-    
-    var tmnCode = config.get('vnp_TmnCode');
-    var secretKey = config.get('vnp_HashSecret');
-    var vnpUrl = config.get('vnp_Url');
-    var returnUrl = config.get('vnp_ReturnUrl');
+        
+        var tmnCode = config.get('vnp_TmnCode');
+        var secretKey = config.get('vnp_HashSecret');
+        var vnpUrl = config.get('vnp_Url');
+        var returnUrl = config.get('vnp_ReturnUrl');
 
-    var date = new Date();
+        var date = new Date();
 
-    var createDate = dateFormat(date, 'yyyymmddHHmmss');
-    var orderId = dateFormat(date, 'HHmmss');
-//Thông tin cần cho thanh toán
-    var amount = req.body.thanhtien;;  //Số tiền
-    var bankCode = '';  //Mã thẻ
-    
-    var orderInfo = idhoadon; //Thông tin order
-    var orderType = 'billpayment';  //Loại order
-    var locale = 'vn';  //Ngôn ngữ
-    if(locale === null || locale === ''){
-        locale = 'vn';
+        var createDate = dateFormat(date, 'yyyymmddHHmmss');
+        var orderId = dateFormat(date, 'HHmmss');
+    //Thông tin cần cho thanh toán
+        var amount = req.body.thanhtien;;  //Số tiền
+        var bankCode = '';  //Mã thẻ
+        
+        var orderInfo = idhoadon; //Thông tin order
+        var orderType = 'billpayment';  //Loại order
+        var locale = 'vn';  //Ngôn ngữ
+        if(locale === null || locale === ''){
+            locale = 'vn';
+        }
+        var currCode = 'VND';
+        var vnp_Params = {};
+        vnp_Params['vnp_Version'] = '2';
+        vnp_Params['vnp_Command'] = 'pay';
+        vnp_Params['vnp_TmnCode'] = tmnCode;
+        // vnp_Params['vnp_Merchant'] = ''
+        vnp_Params['vnp_Locale'] = locale;
+        vnp_Params['vnp_CurrCode'] = currCode;
+        vnp_Params['vnp_TxnRef'] = orderId;
+        vnp_Params['vnp_OrderInfo'] = orderInfo;
+        vnp_Params['vnp_OrderType'] = orderType;
+        vnp_Params['vnp_Amount'] = amount*100;
+        vnp_Params['vnp_ReturnUrl'] = returnUrl;
+        vnp_Params['vnp_IpAddr'] = ipAddr;
+        vnp_Params['vnp_CreateDate'] = createDate;
+        if(bankCode !== null && bankCode !== ''){
+            vnp_Params['vnp_BankCode'] = bankCode;
+        }
+
+        vnp_Params = sortObject(vnp_Params);
+
+        var querystring = require('qs');
+        var signData = secretKey + querystring.stringify(vnp_Params, { encode: false });
+
+        var sha256 = require('sha256');
+
+        var secureHash = sha256(signData);
+
+        vnp_Params['vnp_SecureHashType'] =  'SHA256';
+        vnp_Params['vnp_SecureHash'] = secureHash;
+        vnpUrl += '?' + querystring.stringify(vnp_Params, { encode: true });
+
+        //Neu muon dung Redirect thi dong dong ben duoi
+    // res.status(200).json({code: '00', data: vnpUrl})
+        //Neu muon dung Redirect thi mo dong ben duoi va dong dong ben tren
+        
+        //Tạo hóa đơn với trạng thái chưa thanh toán
+        //start
+        
+        var thanhtien = req.body.thanhtien;
+        var soluongdat = req.body.soluongdat;
+        // var thoigian = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + "-" + d.getHours() + "h" + d.getMinutes() + "p";
+        var thoigian = d;
+        var mathang = db.get('MatHang').find({ id: id }).value();
+        var find = db.get('Chuyenmuc').value();
+
+        // Kiểm tra coi có giá km ko
+        var date1 = new Date(mathang.hankm)
+        var date2 = new Date()
+        var gia;
+        if ((date1.getTime() >= date2.getTime()) && (mathang.giakm < mathang.gia)) { 
+            gia = mathang.giakm
+        }else{
+            gia = mathang.gia
+        }
+
+        var chuyenmuc = db.get('Chuyenmuc').value();
+
+        var donhang = { idhoadon: idhoadon, magiaodich: magiaodich, thanhtoan: thanhtoan, usr: usr, hang: [{ ten: mathang.ten, gia: gia, id: id, soluongdat: soluongdat }], thanhtien: thanhtien, idgiohang: 0, thoigian: thoigian, trangthai:'chuathanhtoan' };
+        db.get('HoaDon')
+            .push(donhang)
+            .write()
+
+        //end;
+        
+        res.redirect(vnpUrl)
+        //End qua trang sandbox
+    } else if (thanhtoan== "ether"){
+        console.log("Thanh toan bang ether ========================================================");
+
+        var thanhtien = req.body.thanhtien;
+        var soluongdat = req.body.soluongdat;
+        // var thoigian = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + "-" + d.getHours() + "h" + d.getMinutes() + "p";
+        var thoigian = d;
+        var mathang = db.get('MatHang').find({ id: id }).value();
+        var find = db.get('Chuyenmuc').value();
+
+        // Kiểm tra coi có giá km ko
+        var date1 = new Date(mathang.hankm)
+        var date2 = new Date()
+        var gia;
+        if ((date1.getTime() >= date2.getTime()) && (mathang.giakm < mathang.gia)) { 
+            gia = mathang.giakm
+        }else{
+            gia = mathang.gia
+        }
+
+        var chuyenmuc = db.get('Chuyenmuc').value();
+
+        // Implement web3
+        // Connecting to web3 + Initiating web3
+        var jsonInterface = [{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"getOrderHistory","outputs":[{"components":[{"internalType":"uint256","name":"token","type":"uint256"},{"internalType":"uint256","name":"timestamp","type":"uint256"},{"internalType":"uint8","name":"quantity","type":"uint8"},{"internalType":"uint256","name":"price_in_wei","type":"uint256"}],"internalType":"struct BookStoreInit.order[]","name":"","type":"tuple[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address payable","name":"_from","type":"address"},{"internalType":"uint256","name":"_token","type":"uint256"},{"internalType":"uint8","name":"_quantity","type":"uint8"}],"name":"implementTransaction","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"incognitoAddress","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"isOwner","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"renounceOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address payable","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
+        var url = 'https://rinkeby.infura.io/v3/95b9bf5b38fb4b9d939b3ae99cfa8386'
+        var Web3 = require('web3')
+        var web3 = new Web3(new Web3.providers.HttpProvider(url));
+        var Contract = require('web3-eth-contract');
+        // set provider for all later instances to use
+        Contract.setProvider('https://rinkeby.infura.io/v3/95b9bf5b38fb4b9d939b3ae99cfa8386');
+        var contract = new Contract(jsonInterface, '0x30d9072A565be8C25580e442C872aF6421b26cD8');
+        // console.log(contract.address);
+        // var mykey = 'M9DwimppdGNFUtBx';
+        // var mysecret = '3c0HE9A3BeESypJukasqyTGQUEi9VF8v';
+        // var Client = require('coinbase').Client;
+        // var client = new Client({'apiKey': mykey, 'apiSecret': mysecret});
+
+        // client.getBuyPrice({'currencyPair': 'BTC-USD'}, function(err, obj) {
+        //     console.log('total amount: ' + obj);
+        // });
+
+        
+
+        // Test function
+        web3.eth.getBalance("0x7De8d441fBb7a6868D3ce81eE26d1Fc0868E8761").then(console.log);
+        web3.eth.getGasPrice().then(console.log)
+        var user_address = "0x7De8d441fBb7a6868D3ce81eE26d1Fc0868E8761"
+        var book_isbn = "4943518564"
+        
+        contract.methods.getOrderHistory(user_address).call().then(console.log).catch(function () {console.log("Promise Rejected");});;
+
+        var nonce =  web3.eth.getTransactionCount(user_address);
+        // var nonceHex
+        var transaction = contract.methods.implementTransaction(user_address, book_isbn, soluongdat);
+        var encodeABI = transaction.encodeABI();
+        var tx = {
+            from: user_address,
+            to: '0x30d9072A565be8C25580e442C872aF6421b26cD8',
+            value: web3.utils.toWei(thanhtien, "ether"),
+            gas: 2000000,
+            data: encodeABI,
+            chainId: 4,
+            // nonce: 5
+        }; 
+        var privateKey = '0x6B4C896CAEB9839A433F0BADBBB2FA28D7B2691E268DFD577C55D9B6D606EC7D';
+        // const privateKey = Buffer.from('6B4C896CAEB9839A433F0BADBBB2FA28D7B2691E268DFD577C55D9B6D606EC7D', 'hex')
+        web3.eth.accounts.signTransaction(tx, privateKey).then(signed => {
+            var tran = web3.eth.sendSignedTransaction(signed.rawTransaction);
+            
+            tran.on('confirmation', (confirmationNumber, receipt) => {
+              console.log('confirmation: ' + confirmationNumber);
+            });
+        
+            tran.on('transactionHash', hash => {
+              console.log('hash');
+              console.log(hash);
+            });
+        
+            tran.on('receipt', receipt => {
+              console.log('reciept');
+              console.log(receipt);
+            });
+        
+            tran.on('error', console.error);
+        });
+
+    } else{
+
+        var thanhtien = req.body.thanhtien;
+        var soluongdat = req.body.soluongdat;
+        // var thoigian = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + "-" + d.getHours() + "h" + d.getMinutes() + "p";
+        var thoigian = d;
+        var mathang = db.get('MatHang').find({ id: id }).value();
+        var find = db.get('Chuyenmuc').value();
+
+        // Kiểm tra coi có giá km ko
+        var date1 = new Date(mathang.hankm)
+        var date2 = new Date()
+        var gia;
+        if ((date1.getTime() >= date2.getTime()) && (mathang.giakm < mathang.gia)) { 
+            gia = mathang.giakm
+        }else{
+            gia = mathang.gia
+        }
+
+        var chuyenmuc = db.get('Chuyenmuc').value();
+
+        var donhang = { idhoadon: idhoadon, magiaodich: magiaodich, thanhtoan: thanhtoan, usr: usr, hang: [{ ten: mathang.ten, gia: gia, id: id, soluongdat: soluongdat }], thanhtien: thanhtien, idgiohang: 0, thoigian: thoigian, trangthai:'dathanhtoan' };
+        db.get('HoaDon')
+            .push(donhang)
+            .write()
+
+        var name = req.cookies.info.username;
+        var role = "";
+
+        if(req.cookies.info.role){
+            role = req.cookies.info.role;
+        }
+        res.render('thongtinhoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: name,role:role , find: find});
     }
-    var currCode = 'VND';
-    var vnp_Params = {};
-    vnp_Params['vnp_Version'] = '2';
-    vnp_Params['vnp_Command'] = 'pay';
-    vnp_Params['vnp_TmnCode'] = tmnCode;
-    // vnp_Params['vnp_Merchant'] = ''
-    vnp_Params['vnp_Locale'] = locale;
-    vnp_Params['vnp_CurrCode'] = currCode;
-    vnp_Params['vnp_TxnRef'] = orderId;
-    vnp_Params['vnp_OrderInfo'] = orderInfo;
-    vnp_Params['vnp_OrderType'] = orderType;
-    vnp_Params['vnp_Amount'] = amount*100;
-    vnp_Params['vnp_ReturnUrl'] = returnUrl;
-    vnp_Params['vnp_IpAddr'] = ipAddr;
-    vnp_Params['vnp_CreateDate'] = createDate;
-    if(bankCode !== null && bankCode !== ''){
-        vnp_Params['vnp_BankCode'] = bankCode;
-    }
-
-    vnp_Params = sortObject(vnp_Params);
-
-    var querystring = require('qs');
-    var signData = secretKey + querystring.stringify(vnp_Params, { encode: false });
-
-    var sha256 = require('sha256');
-
-    var secureHash = sha256(signData);
-
-    vnp_Params['vnp_SecureHashType'] =  'SHA256';
-    vnp_Params['vnp_SecureHash'] = secureHash;
-    vnpUrl += '?' + querystring.stringify(vnp_Params, { encode: true });
-
-    //Neu muon dung Redirect thi dong dong ben duoi
-   // res.status(200).json({code: '00', data: vnpUrl})
-    //Neu muon dung Redirect thi mo dong ben duoi va dong dong ben tren
-    
-    //Tạo hóa đơn với trạng thái chưa thanh toán
-    //start
-    
-    var thanhtien = req.body.thanhtien;
-    var soluongdat = req.body.soluongdat;
-    // var thoigian = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + "-" + d.getHours() + "h" + d.getMinutes() + "p";
-    var thoigian = d;
-    var mathang = db.get('MatHang').find({ id: id }).value();
-    var find = db.get('Chuyenmuc').value();
-
-    // Kiểm tra coi có giá km ko
-    var date1 = new Date(mathang.hankm)
-    var date2 = new Date()
-    var gia;
-    if ((date1.getTime() >= date2.getTime()) && (mathang.giakm < mathang.gia)) { 
-        gia = mathang.giakm
-    }else{
-        gia = mathang.gia
-    }
-
-    var chuyenmuc = db.get('Chuyenmuc').value();
-
-    var donhang = { idhoadon: idhoadon, magiaodich: magiaodich, thanhtoan: thanhtoan, usr: usr, hang: [{ ten: mathang.ten, gia: gia, id: id, soluongdat: soluongdat }], thanhtien: thanhtien, idgiohang: 0, thoigian: thoigian, trangthai:'chuathanhtoan' };
-    db.get('HoaDon')
-        .push(donhang)
-        .write()
-
-    //end;
-    
-    res.redirect(vnpUrl)
-    //End qua trang sandbox
-} else{
-
-   
-
-    var thanhtien = req.body.thanhtien;
-    var soluongdat = req.body.soluongdat;
-    // var thoigian = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + "-" + d.getHours() + "h" + d.getMinutes() + "p";
-    var thoigian = d;
-    var mathang = db.get('MatHang').find({ id: id }).value();
-    var find = db.get('Chuyenmuc').value();
-
-    // Kiểm tra coi có giá km ko
-    var date1 = new Date(mathang.hankm)
-    var date2 = new Date()
-    var gia;
-    if ((date1.getTime() >= date2.getTime()) && (mathang.giakm < mathang.gia)) { 
-        gia = mathang.giakm
-    }else{
-        gia = mathang.gia
-    }
-
-    var chuyenmuc = db.get('Chuyenmuc').value();
-
-    var donhang = { idhoadon: idhoadon, magiaodich: magiaodich, thanhtoan: thanhtoan, usr: usr, hang: [{ ten: mathang.ten, gia: gia, id: id, soluongdat: soluongdat }], thanhtien: thanhtien, idgiohang: 0, thoigian: thoigian, trangthai:'dathanhtoan' };
-    db.get('HoaDon')
-        .push(donhang)
-        .write()
-
-    var name = req.cookies.info.username;
-    var role = "";
-
-    if(req.cookies.info.role){
-        role = req.cookies.info.role;
-    }
-    res.render('thongtinhoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: name,role:role , find: find});
-}
 }
 
 //GET Lich su giao dich
