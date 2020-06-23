@@ -53,6 +53,18 @@
       "idgiohang": "ve6aLwBh",
       "mathang": [
         {
+          "ten": "Bàn 1tttttttttttt",
+          "id": "GP4mRNlm",
+          "mota": "Bàn đẹp nè",
+          "gia": "500000",
+          "anh": "/img/img_products/300x300.jpg",
+          "soluong": "120",
+          "chuyenmuc": "Bàn",
+          "soluongdat": 1,
+          "giakm": "",
+          "hankm": ""
+        },
+        {
           "ten": "Ghế game cc",
           "id": "LVImo5xl",
           "mota": "Không đẹp nè",
@@ -102,7 +114,7 @@
   ],
   "Chuyenmuc": [
     {
-      "ten": "123",
+      "ten": "Adapter wifi",
       "id": "UidrhuWQ",
       "url": ""
     },
@@ -110,16 +122,6 @@
       "ten": "test2",
       "id": "U2uFCGFS",
       "url": ""
-    },
-    {
-      "ten": "test23",
-      "id": "yCMi5obp",
-      "url": "123"
-    },
-    {
-      "ten": "abcd",
-      "id": "XkIenITN",
-      "url": "123123"
     },
     {
       "ten": "ghe",
@@ -130,11 +132,6 @@
       "ten": "Bàn",
       "id": "CaEcdk3d",
       "url": "ban"
-    },
-    {
-      "ten": "text",
-      "id": "gG6QI3Rx",
-      "url": ""
     },
     {
       "ten": "Thiết kế",
@@ -179,11 +176,6 @@
     {
       "ten": "Kỹ thuật",
       "id": "nZtyFBnA",
-      "url": ""
-    },
-    {
-      "ten": "CNTTNC",
-      "id": "8z9xUPRe",
       "url": ""
     }
   ],
@@ -1115,6 +1107,149 @@
       "idgiohang": "ve6aLwBh",
       "thoigian": "2020-06-18T13:37:30.336Z",
       "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "Lj1Ge2Mt",
+      "magiaodich": "ikDQl3kC",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế game cc",
+          "id": "LVImo5xl",
+          "soluongdat": 1,
+          "gia": "190000"
+        }
+      ],
+      "thanhtien": 190000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-23T08:32:00.524Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "88vTXkF8",
+      "magiaodich": "xFEq40ik",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [],
+      "thanhtien": 0,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-23T08:39:34.609Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "6Rj8biwv",
+      "magiaodich": "FiQU7AfR",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Bàn 1tttttttttttt",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T08:40:57.404Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "UwjCJtzr",
+      "magiaodich": "lnMxd6jX",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Bàn 1tttttttttttt",
+          "gia": "500000",
+          "id": "GP4mRNlm",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T08:41:19.957Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "6e2mkM7t",
+      "magiaodich": "UeJ7nRi7",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Bàn 1tttttttttttt",
+          "id": "GP4mRNlm",
+          "soluongdat": 1,
+          "gia": "500000"
+        },
+        {
+          "ten": "Ghế game cc",
+          "id": "LVImo5xl",
+          "soluongdat": 1,
+          "gia": "190000"
+        }
+      ],
+      "thanhtien": 690000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-23T08:43:11.805Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "FnjZV2Tu",
+      "magiaodich": "Jb4FggFp",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế game cc",
+          "gia": "190000",
+          "id": "LVImo5xl",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "190000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T08:43:24.451Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "d78EnxhZ",
+      "magiaodich": "EtzMELrW",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế game cc",
+          "gia": "190000",
+          "id": "LVImo5xl",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "190000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T08:51:46.524Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "LOXf2Edj",
+      "magiaodich": "HhSbfwWp",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế game cc",
+          "gia": "190000",
+          "id": "LVImo5xl",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "190000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-23T08:51:57.075Z",
+      "trangthai": "dathanhtoan"
     }
   ],
   "MatHang": [
@@ -1173,7 +1308,7 @@
       "gia": "600000",
       "anh": "/img/img_products/300x300.jpg",
       "soluong": "120",
-      "chuyenmuc": "123",
+      "chuyenmuc": "Adapter wifi",
       "giakm": "350000",
       "hankm": "2020-06-05",
       "soluongdat": 1
@@ -1185,7 +1320,7 @@
       "gia": "23000000",
       "anh": "/img/img_products/300x300.jpg",
       "soluong": "15",
-      "chuyenmuc": "123",
+      "chuyenmuc": "Adapter wifi",
       "giakm": "19999999",
       "hankm": "2020-06-11",
       "soluongdat": 1

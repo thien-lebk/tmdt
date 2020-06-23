@@ -122,10 +122,13 @@ module.exports.dangnhap = function (req, res, next) {
 //Them chuyen muc GET
 module.exports.themchuyenmuc = function (req, res, next) {
     var name = req.cookies.info.username;
+
+    var dsChuyenMuc = db.get('Chuyenmuc').value();
+
     var role = "";
     if( req.cookies.info.role){
         role = req.cookies.info.role;
-        res.render('themchuyenmuc', { title: 'Thêm chuyên mục', status: '', name: name,role:role });
+        res.render('themchuyenmuc', { title: 'Thêm chuyên mục', status: '', name: name,role:role , dsChuyenMuc});
     } else {
         res.redirect('/');
     }
@@ -141,7 +144,17 @@ module.exports.postthemchuyenmuc = function (req, res, next) {
         .write()
     var find = db.get('Chuyenmuc').value();
 
-    res.redirect('/');
+    var name = req.cookies.info.username;
+
+    var dsChuyenMuc = db.get('Chuyenmuc').value();
+
+    var role = "";
+    if( req.cookies.info.role){
+        role = req.cookies.info.role;
+        res.render('themchuyenmuc', { title: 'Thêm chuyên mục', status: '', name: name,role:role , dsChuyenMuc});
+    } else {
+        res.redirect('/');
+    }
 }
 //Them mat hang GET
 module.exports.themmathang = function (req, res, next) {
@@ -908,4 +921,85 @@ module.exports.xoasanpham = function(req, res, next){
     var dsSanpham = db.get("MatHang").filter({chuyenmuc: chuyenmuc}).value();
     var find = db.get('Chuyenmuc').value();
     res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find, role:role});
+}
+
+module.exports.search = function(req, res, next){
+
+    var name;
+    if (req.cookies.info) {
+        if (req.cookies.info.username) {
+            name = req.cookies.info.username;
+        } else {
+            name = "";
+
+        }
+    }
+    else {
+        name = "";
+
+    }
+
+
+    var find = db.get('Chuyenmuc').value();
+
+    var query = req.query.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D")
+
+    var dsSanpham = db.get("MatHang").value();
+    //console.log(dsSanpham);
+    var re = new RegExp(query,"i");
+    dsSanpham = dsSanpham.filter((element)=>{
+        var tempName = element.ten.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D");
+        return tempName.search(re) != -1;
+    })
+
+    //console.log(dsSanpham);
+
+    res.render('search', {name: name, listsp: dsSanpham, find: find,role: "", query: req.query.name});
+}
+
+//Xoá chuyen muc POST
+module.exports.xoachuyenmuc = function (req, res, next) {
+    var ten = req.body.ten;
+
+    db.get('Chuyenmuc')
+        .remove({ ten: ten })
+        .write()
+
+    db.get('MatHang').remove({chuyenmuc: ten}).write();
+    // var name = req.cookies.info.username;
+
+    // var dsChuyenMuc = db.get('Chuyenmuc').value();
+
+    // var role = "";
+    // if( req.cookies.info.role){
+    //     role = req.cookies.info.role;
+    //     res.render('themchuyenmuc', { title: 'Thêm chuyên mục', status: '', name: name,role:role , dsChuyenMuc});
+    // } else {
+    //     res.redirect('/');
+    // }
+    res.redirect('/themchuyenmuc')
+}
+
+
+//Sửa chuyen muc POST
+module.exports.suachuyenmuc = function (req, res, next) {
+    var ten = req.body.new_ten;
+
+    // db.get('Chuyenmuc')
+    //     .remove({ ten })
+    //     .write()
+    // var find = db.get('Chuyenmuc').value();
+
+    
+    while(db.get('MatHang').find({chuyenmuc: req.body.old_ten}).value()){
+        db.get('MatHang')
+            .find({ chuyenmuc: req.body.old_ten })
+            .assign({ chuyenmuc: req.body.new_ten})
+            .write()           
+    }
+    db.get('Chuyenmuc').find({ten: req.body.old_ten}).assign({ten: req.body.new_ten}).write();
+
+    console.log("-------------------------------clicked update button!!!!!!!")
+
+    res.redirect('/themchuyenmuc');
 }

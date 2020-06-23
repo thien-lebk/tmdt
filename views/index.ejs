@@ -16,7 +16,7 @@
       <div class="owl-carousel owl-theme margin-items outer-center-vertical-brand" id="key-items"
                 style="width: 100%; height: 50%;">
         <%  find.forEach(element => { %>
-          <button class="btn btn-outline-danger btn-lg"><a style="color: inherit; font-weight: 600; text-decoration: none;" href=<%= "danhmuc/" + element.ten %> > <%= element.ten %></a></button>
+          <button class="btn btn-outline-danger btn-lg"><a style="color: inherit; font-weight: 600; text-decoration: none;" href=<%= "danhmuc/" + encodeURIComponent(element.ten.trim()) %> > <%= element.ten %></a></button>
         <% }); %>
       </div>
     

@@ -203,6 +203,9 @@ router.get('/danhmuc/:tendanhmuc', controller.xemtheodanhmuc);
 router.get('/chinhsua/:id', auth.authen, controller.chinhsuamathang);
 router.post('/chinhsua/:id', auth.authen, controller.postchinhsuamathang);      // Xử lí form chỉnh sửa
 router.post('/xoa/:id', auth.authen, controller.xoasanpham);      // Xử lí form chỉnh sửa
+router.post('/suachuyenmuc', auth.authen, controller.suachuyenmuc);   
+router.post('/xoachuyenmuc', auth.authen, controller.xoachuyenmuc);      
 
+router.get('/search', controller.search);
 
 module.exports = router;
