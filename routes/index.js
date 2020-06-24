@@ -114,7 +114,22 @@ router.get('/vnpay_return', function (req, res, next) {
     var idHoaDon = (vnp_Params.vnp_OrderInfo);
     var transNo = (vnp_Params.vnp_TransactionNo);
     if(transNo == 0){
-        res.render('error',{message: "Giao dịch thất bại"});
+        // res.render('error',{message: "Giao dịch thất bại"});
+        var find = db.get('Chuyenmuc').value();
+        var mathang = db.get('MatHang').value();
+        var name = "";
+        var role = "";
+    
+        if (req.cookies.info) {
+            if (req.cookies.info.username) {
+                name = req.cookies.info.username;
+            } 
+            if (req.cookies.info.role) {
+                role = req.cookies.info.role;
+            } 
+        }
+    
+        res.render('thanhtoanthattbai', { title: 'Express', find: find, listsp: mathang, name: name, role:role, idhoadon:idHoaDon});
     }
     if(secureHash === checkSum){
 

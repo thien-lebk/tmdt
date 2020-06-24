@@ -122,6 +122,18 @@
       "ten": "Kỹ thuật",
       "id": "nZtyFBnA",
       "url": ""
+    },
+    {
+      "ten": "CƠ KHÍ",
+      "id": "HpzkP3Ow"
+    },
+    {
+      "ten": "CHỐNG ĂN MÒN",
+      "id": "mvvWCaP2"
+    },
+    {
+      "ten": "ĐIỆN",
+      "id": "P4YTLt8V"
     }
   ],
   "HoaDon": [
@@ -1852,6 +1864,138 @@
       "idgiohang": 0,
       "thoigian": "2020-06-24T10:23:03.720Z",
       "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "fy8B5rLr",
+      "magiaodich": "e5P49vqR",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "THIẾT KẾ ĐƯỜNG ỐNG",
+          "id": "123456",
+          "soluongdat": "1",
+          "gia": "200000"
+        },
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "id": "767582725",
+          "soluongdat": "1",
+          "gia": "150000"
+        }
+      ],
+      "thanhtien": 350000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-24T16:35:52.971Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "44Qqhszj",
+      "magiaodich": "0x1b577f8730a5d7d35f019b40fa06049013180ef898d1e0ebed2dda07b06051b2",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "MATLAB CƠ BẢN",
+          "gia": "200000",
+          "id": "7867224",
+          "soluongdat": "3"
+        }
+      ],
+      "thanhtien": "0.10576220092183639",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T16:36:12.289Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "7vxiuHv7",
+      "magiaodich": "vn6hssR9",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "gia": "150000",
+          "id": "767582725",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "150000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T16:41:44.215Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "US9HULhE",
+      "magiaodich": "GGZSjGi4",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Basic technical English – Elementary",
+          "gia": "500000",
+          "id": "786725417",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T16:45:59.042Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "qU1J66Vq",
+      "magiaodich": "5SbRc7hk",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Basic technical English – Elementary",
+          "gia": "500000",
+          "id": "786725417",
+          "soluongdat": "3"
+        }
+      ],
+      "thanhtien": "1500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T16:47:42.467Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "yUEg5Blv",
+      "magiaodich": "ljzFqnWL",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Inventor cơ bản và nâng cao",
+          "id": "954976",
+          "soluongdat": "1",
+          "gia": "999000"
+        },
+        {
+          "ten": "Corrosion control and prevention",
+          "id": "639035",
+          "soluongdat": "1",
+          "gia": "500000"
+        },
+        {
+          "ten": "AUTOCAD cơ bản ngành cơ khí",
+          "id": "658116",
+          "soluongdat": "1",
+          "gia": "650000"
+        },
+        {
+          "ten": "Tính toán điện hợp chuẩn",
+          "id": "60190",
+          "soluongdat": "1",
+          "gia": "650000"
+        }
+      ],
+      "thanhtien": 2799000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-24T17:32:29.102Z",
+      "trangthai": "dathanhtoan"
     }
   ],
   "MatHang": [
@@ -1932,6 +2076,54 @@
       "anh": "/img/img_products/DUONGONG.jpg",
       "soluong": "100",
       "chuyenmuc": "ĐƯỜNG",
+      "giakm": "",
+      "hankm": "",
+      "soluongdat": 1
+    },
+    {
+      "ten": "AUTOCAD cơ bản ngành cơ khí",
+      "id": "658116",
+      "mota": "TẠI SAO PHẢI HỌC AUTOCAD?\r\n\r\nTrong thời đại mà 3D dần trở nên chiếm ưu thế, các công nghệ và sự phát triển vượt bậc của nền công nghiệp 4.0, thì cái tên AUTOCAD đã không còn quá mặn mà với các kỹ sư chúng ta.\r\n\r\nTuy vậy, AUTOCAD luôn có một chỗ đứng vững chắc trong mọi ngành nghề, và có thể nói nó gần như là mặc định đối với kỹ sư hoặc những người làm kỹ thuât.\r\n\r\nDựa vào các tính năng và khả năng tuyệt vời vốn có, AUTOCAD có thể xử lý nhiều đối tượng cùng 1 lúc, quản lí kiểm soát bản vẽ thiết kế 1 cách tối ưu, truy suất dữ liệu nhanh chóng đơn giảng, có thể xuất ra được nhiều định dạng phù hợp với công việc và sản xuất. AUTOCAD được các nhà tuyển dụng liệt vào kỹ năng bắt buộc mặc định đối với kỹ sư và nhân viên cũng như những ai làm việc có liên quan đến bản vẽ.\r\n\r\nSinh viên các trường đại học hiện nay cũng được tiếp thu các kiến thức về AUTOCAD nhưng vẫn còn nhiều hạn chế do tùy điều kiện mỗi trường mà có sự phân bố, phân chia hình thức học khác nhau, như vậy kiến thức cũng không đồng đều và chất lượng. Dẫn đến các bạn học quoa loa chiếu lệ để hoàn thành, làm mất đi tính đúng đăn của việc học và sử dụng AUTOCAD.\r\n\r\nAUTOCAD CƠ BẢN KHÓA HỌC AUTOCAD CĂN BẢN DÀNH CHO SINH VIÊN VÀ NHỮNG NGƯỜI MỚI BẮT ĐẦU LÀM QUEN VỚI AUTOCAD",
+      "gia": "650000",
+      "anh": "/img/img_products/CAD_COKHI.jpg",
+      "soluong": "100",
+      "chuyenmuc": "CƠ KHÍ",
+      "giakm": "",
+      "hankm": "",
+      "soluongdat": 1
+    },
+    {
+      "ten": "Corrosion control and prevention",
+      "id": "639035",
+      "mota": "Who should attend?\r\n\r\nThis course is organized for corrosion practitioners, designers, technical managers, inspection and maintenance engineers, quality control personnel and those involved in failure analysis to update their appreciation of corrosion and the awareness of the emerging technologies for corrosion control and prevention.\r\n\r\nCourse content:\r\n\r\n1. Introduction\r\n\r\nDefinition of Corrosion & some examples of Corrosion\r\nThe impacts of corrosion on society: economy, society, politics and environment\r\nBasic Concepts in Corrosion\r\nCorrosion Terminologies and Conventions\r\nExercise/Practical Session\r\n2. Why Do Metals Corrode? ‐ The Driving Force for Corrosion: activity and passivity\r\n\r\nKinetics: The Rate of Corrosion\r\nPolarization\r\nType of polarization and rate-controlling steps\r\nConcentration polarization and the importance of dissolved oxygen\r\nEffect of oxidizer concentration and velocity on the rate of corrosion\r\nDepolarizers and Depolarization\r\nExercise/Practical Session\r\n3. How Do Metals Corrode: Different Forms of Corrosion: Mechanisms, Recognition and Prevention\r\n\r\nCorrosion in Specific Environments\r\nExercise/Practical Session\r\n4. Methods for Corrosion Control and Prevention\r\n\r\nCorrosion Testing and Monitoring\r\nCorrosion Modeling and Corrosion Prediction\r\nExercise/Practical Session\r\n5. End of Course Examination",
+      "gia": "650000",
+      "anh": "/img/img_products/ANMON.jpg",
+      "soluong": "100",
+      "chuyenmuc": "CHỐNG ĂN MÒN",
+      "giakm": "500000",
+      "hankm": "2020-07-01",
+      "soluongdat": 1
+    },
+    {
+      "ten": "Tính toán điện hợp chuẩn",
+      "id": "60190",
+      "mota": "Biết và vận dụng được các tiêu chuẩn IEC/ANSI mà phần ETAP áp dụng để tính toán, mô phỏng hệ thống điện.\r\n👉 Học viên được cập nhật, bổ sung kiến thức, học hỏi kinh nghiệm sử dụng phần mềm ETAP trong tính toán & thiết kế Điện.\r\n👉 Phân tích được cấu hình của hệ thống điện của một nhà máy, xí nghiệp, công trình điện onshore cũng như offshore.\r\n👉 Hiểu và vận dụng được mô hình của các phần tử điện (máy phát, máy biến áp, đường dây, cáp điện, tủ điện, tụ bù, …) cho phân tích hệ thống điện bằng phần mềm ETAP.\r\n👉 Phân tích dòng công suất, tính ngắn mạch, khởi động động cơ, phân tích sóng hài, phối hợp bảo vệ rờ le, phân tích quá độ, tính toán lựa chọn cáp điện cho hệ thống điện bằng phần mềm ETAP theo tiêu chuẩn ANSI/IEC.\r\n👉 Học viên được kết nối vào Group để chia sẻ tài liệu, hỗ trợ sau khóa học, được cập nhật thông tin mới về cơ hội và nghề nghiệp trong ngành Điện.\r\n👉 Học viên có cơ hội hợp tác với Team được offer những ưu đãi hấp dẫn về các khóa học trong hệ thống.",
+      "gia": "650000",
+      "anh": "/img/img_products/ETAP.jpg",
+      "soluong": "100",
+      "chuyenmuc": "ĐIỆN",
+      "giakm": "",
+      "hankm": "",
+      "soluongdat": 1
+    },
+    {
+      "ten": "Inventor cơ bản và nâng cao",
+      "id": "954976",
+      "mota": "Khóa học Inventor giúp cac bạn biết cách sử dụng thông thạo phần mềm Autodesk Inventor, đây là một công cụ đi đầu trong lĩnh vực thiết kế 3D và chế tạo máy cơ khí.\r\nKhóa học Inventor hướng dẫn các bạn cách trình bày bản vẽ kỹ thuật 2D, đo kích thước, ghi dung sai và các yêu cầu kỹ thuật trong bản vẽ thiết kế.\r\nKhóa học Inventor hướng dẫn các bạn sử dụng các lệnh trong Sketch để thiết kế 2D cơ bản, cách đọc hình và dựng hình, các lệnh trong thiết kế 3D cho các chi tiết máy, thiết bị hay bất kì các vật thể nào một cách dễ dàng.\r\nKhi cần mô phỏng hoạt động của chi tiết máy trong cơ cấu thì phần mềm Inventor là công cụ thiết kế 3D hiệu quả nhất dành cho bạn.\r\nKhóa học Inventor cung cấp cho các bạn lắp ráp các chi tiết (Assembly) thành các cụm chi tiết hay cụm máy hoàn chỉnh, mô phỏng tháo lắp bóc tách cho từng chi tiết.\r\nSau khóa học Inventor tại trung tâm Học Cơ Khí, người học hoàn toàn có thể làm chủ được công cụ thiết kế 2D, các lệnh dựng hình 3D cho chi tiết máy, các vật thể, vật dụng.",
+      "gia": "999000",
+      "anh": "/img/img_products/INVENTOR.jpg",
+      "soluong": "100",
+      "chuyenmuc": "ĐỒ HỌA",
       "giakm": "",
       "hankm": "",
       "soluongdat": 1
