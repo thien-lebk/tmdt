@@ -22,49 +22,51 @@
     <div style="padding-top: 50px; padding-bottom: 30px;">
       <h4 style="color: red;"><strong>SẢN PHẨM</strong></h4>
     </div>
-    
-    <div class="card" style="width: 18rem; text-align: center;">
-      <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
-      <div class="card-body">
-        <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
-        <p> Mô tả: <%= mathang.mota %></p>
-        <P>Số lượng trong kho: <%= mathang.soluong %></P>
-        
-        <!-- Kiểm tra coi có khuyến mãi ko -->
-        <% var date1 = new Date(mathang.hankm); %>
-        <% var date2 = new Date() %>  
-        <% if ((date1.getTime() >= date2.getTime()) && (mathang.giakm != "")) { %>
-          <p style="font-size: 20px;" class="price"><%= mathang.giakm %> đ</p>
-          <p class="ogri-price"><del><%= mathang.gia %> đ</del></p>
-        <% } else { %> 
-          <p style="font-size: 20px; padding-bottom: 15px;" class="price"><%= mathang.gia %> đ</p>
-        <% } %> 
-  
-        <form method="post">
-          <input type="hidden" name="ten" value=<%= mathang.ten %>>
-          <input type="hidden" name="anh" value=<%= mathang.anh %>>
-          <input type="hidden" name="mota" value=<%= mathang.mota %>>
-          <input type="hidden" name="soluong" value=<%= mathang.soluong %>>
-          <input type="hidden" name="id" value=<%= mathang.id %>>
+    <div>
+
+      <div class="card mx-auto" style="width: 18rem; text-align: center;">
+        <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
+        <div class="card-body">
+          <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
+          <p> Mô tả: <%= mathang.mota %></p>
+          <P>Số lượng trong kho: <%= mathang.soluong %></P>
           
           <!-- Kiểm tra coi có khuyến mãi ko -->
           <% var date1 = new Date(mathang.hankm); %>
           <% var date2 = new Date() %>  
           <% if ((date1.getTime() >= date2.getTime()) && (mathang.giakm != "")) { %>
-            <input type="hidden" name="gia" <%= mathang.giakm %>>
+            <p style="font-size: 20px;" class="price"><%= mathang.giakm %> đ</p>
+            <p class="ogri-price"><del><%= mathang.gia %> đ</del></p>
           <% } else { %> 
-            <input type="hidden" name="gia" <%= mathang.gia %>>
+            <p style="font-size: 20px; padding-bottom: 15px;" class="price"><%= mathang.gia %> đ</p>
           <% } %> 
-  
-          <input type="hidden" name="gia" <%= mathang.gia %>>
-          <input type="hidden" name="soluongmua" value="1">
-          <div style="text-align: center;">
-            <button style="margin-bottom: 10px;" class="btn btn-outline-success" type="submit" formaction="/thanhtoan">Mua ngay</button>
-            <button class="btn btn-outline-danger" type="submit" formaction="/themgiohang">Thêm vào giỏ hàng</button>
-          </div>
-          
-        </form>
-  
+    
+          <form method="post">
+            <input type="hidden" name="ten" value=<%= mathang.ten %>>
+            <input type="hidden" name="anh" value=<%= mathang.anh %>>
+            <input type="hidden" name="mota" value=<%= mathang.mota %>>
+            <input type="hidden" name="soluong" value=<%= mathang.soluong %>>
+            <input type="hidden" name="id" value=<%= mathang.id %>>
+            
+            <!-- Kiểm tra coi có khuyến mãi ko -->
+            <% var date1 = new Date(mathang.hankm); %>
+            <% var date2 = new Date() %>  
+            <% if ((date1.getTime() >= date2.getTime()) && (mathang.giakm != "")) { %>
+              <input type="hidden" name="gia" <%= mathang.giakm %>>
+            <% } else { %> 
+              <input type="hidden" name="gia" <%= mathang.gia %>>
+            <% } %> 
+    
+            <input type="hidden" name="gia" <%= mathang.gia %>>
+            <input type="hidden" name="soluongmua" value="1">
+            <div style="text-align: center;">
+              <button style="margin-bottom: 10px;" class="btn btn-outline-success" type="submit" formaction="/thanhtoan">Mua ngay</button>
+              <button class="btn btn-outline-danger" type="submit" formaction="/themgiohang">Thêm vào giỏ hàng</button>
+            </div>
+            
+          </form>
+    
+        </div>
       </div>
     </div>
   </div>

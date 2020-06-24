@@ -51,7 +51,20 @@
     {
       "username": "admin2",
       "idgiohang": "ve6aLwBh",
-      "mathang": []
+      "mathang": [
+        {
+          "ten": "Chair nè",
+          "id": "woTukjEX",
+          "mota": "không có gi",
+          "gia": "600000",
+          "anh": "/img/img_products/300x300.jpg",
+          "soluong": "120",
+          "chuyenmuc": "Adapter wifi",
+          "giakm": "350000",
+          "hankm": "2020-06-05",
+          "soluongdat": 1
+        }
+      ]
     },
     {
       "username": "guest",
@@ -84,20 +97,7 @@
     {
       "username": "anh2",
       "idgiohang": "oJbopPkO",
-      "mathang": [
-        {
-          "ten": "Ghế 2",
-          "id": "onyCct5Q",
-          "mota": "Ghế đẹp nữa nè",
-          "gia": "150000",
-          "anh": "/img/img_products/300x300.jpg",
-          "soluong": "100",
-          "chuyenmuc": "ghe",
-          "giakm": "130000",
-          "hankm": "2020-07-07",
-          "soluongdat": 1
-        }
-      ]
+      "mathang": []
     }
   ],
   "Chuyenmuc": [
