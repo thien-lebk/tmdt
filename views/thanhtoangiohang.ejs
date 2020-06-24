@@ -31,18 +31,26 @@
   <div style="padding-bottom: 30px;">
     <h4 style="color: red;"><strong>DANH SÁCH SẢN PHẨM</strong></h4>
   </div>
-  <% giohang.mathang.forEach(mathang => { %>
-  <div class="card" style="width: 18rem; margin-bottom: 40px;">
-    <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
-    <div class="card-body">
-      <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
-      <p> Mô tả: <%= mathang.mota %></p>
-      <P>Số lượng <%= mathang.soluongdat %></p>
-      <p class="card-text">Thành tiền: <%= mathang.gia*mathang.soluongdat %>đ</p>
+  <div class="row">
+    <% giohang.mathang.forEach(mathang => { %>
+    <div class="col-3">
      
+        <div class="card mb-5" style="width: 18rem; margin-bottom: 40px;">
+          <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
+          <div class="card-body">
+            <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
+            <p> Mô tả: <%= mathang.mota %></p>
+            <P>Số lượng <%= mathang.soluongdat %></p>
+            <p class="card-text">Thành tiền: <%= mathang.gia*mathang.soluongdat %>đ</p>
+           
+          </div>
+        </div>
+        
     </div>
+    <% }); %>
+    
   </div>
-  <% }); %>
+  
 </div>
   <%- include("chucnang/footer.ejs") %>
   

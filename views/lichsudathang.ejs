@@ -8,8 +8,9 @@
   <!-- Navnar -->
   <%- include("chucnang/navbar.ejs") %>
   <!-- End of Navnar -->
-
-  <table class="table">
+<div class="container text-center">
+  <h1 class="text-danger">Lịch sử đặt hàng</h1>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col"></th>
@@ -38,7 +39,7 @@
           <form action="chitietlichsudonhang" method="post">
 
             <input type="hidden" name="idhoadon" value=<%= element.idhoadon %>>
-            <button type="submit">Xem chi tiết</button>
+            <button class="btn btn-outline-danger" type="submit">Xem chi tiết</button>
           </form>
         </td>
       </tr>
@@ -46,6 +47,8 @@
 
     </tbody>
   </table>
+</div>
+  
   <%- include("chucnang/footer.ejs") %>
 </body>
 

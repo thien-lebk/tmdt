@@ -41,7 +41,7 @@
       style="width: 100%; height: 50%;">
       <%  find.forEach(element => { %>
       <button class="btn btn-outline-danger btn-lg"><a style="color: inherit; font-weight: 600; text-decoration: none;"
-          href=<%= element.ten %>> <%= element.ten %></a></button>
+        href=<%= "/danhmuc/" + encodeURIComponent(element.ten.trim()) %>> <%= element.ten %></a></button>
       <% }); %>
     </div>
 
