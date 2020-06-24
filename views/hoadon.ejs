@@ -22,8 +22,9 @@
         <div class="card-body">
           <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
           <!-- <p> Mô tả: <%= mathang.mota %></p> -->
-          <P>Số lượng <%= soluongdat %></p>
-          <p class="card-text font-weight-bold text-danger" id="tong_tien">Thành tiền: <%= (mathang.gia*soluongdat).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %>đ</p>
+          <P><strong>Số lượng</strong> <%= soluongdat %></p>
+          <P id="id_khoahoc" style="display: none;"><strong>ID Khoá học:</strong> <%= mathang.id %></p>
+          <p class="card-text " id="tong_tien"><strong>Thành tiền: </strong><%= (mathang.gia*soluongdat).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %>đ</p>
           <form action="xacnhanthanhtoan" method="post">
             <input type="hidden" name="ten" value=<%= mathang.ten %>>
             <input type="hidden" name="anh" value=<%= mathang.anh %>>
@@ -95,9 +96,11 @@
       var valueSelected = this.value;
       console.log(valueSelected);
       if (valueSelected == 'ether'){
+        $("#id_khoahoc").show();
         $("#xac-nhan").prop('type', 'button');
         $("#tong_tien").text('Thành tiền: ' + <%= (mathang.gia*soluongdat/5673104.33).toFixed(3) %> + ' ETH')
       }else{
+        $("#id_khoahoc").hide();
         $("#xac-nhan").prop('type', 'submit');
         $("#tong_tien").text('Thành tiền: ' + (<%= mathang.gia*soluongdat %>).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + 'đ')
       }

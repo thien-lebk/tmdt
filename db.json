@@ -1834,6 +1834,24 @@
       "idgiohang": "ve6aLwBh",
       "thoigian": "2020-06-24T10:14:42.421Z",
       "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "HER67mlw",
+      "magiaodich": "0x24adcf5d6470cc799bd4dff7d5251a22e221a5cae3aca5795ef54c25f3cc45a8",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC",
+          "gia": "500000",
+          "id": "1443358",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "0.08813516743486366",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T10:23:03.720Z",
+      "trangthai": "dathanhtoan"
     }
   ],
   "MatHang": [
