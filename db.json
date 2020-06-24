@@ -62,7 +62,7 @@
           "chuyenmuc": "Adapter wifi",
           "giakm": "350000",
           "hankm": "2020-06-05",
-          "soluongdat": 1
+          "soluongdat": "1"
         }
       ]
     },
@@ -102,31 +102,6 @@
   ],
   "Chuyenmuc": [
     {
-      "ten": "Adapter wifi",
-      "id": "UidrhuWQ",
-      "url": ""
-    },
-    {
-      "ten": "test 22",
-      "id": "U2uFCGFS",
-      "url": ""
-    },
-    {
-      "ten": "ghe",
-      "id": "OZWir4rm",
-      "url": "ghe"
-    },
-    {
-      "ten": "Bàn",
-      "id": "CaEcdk3d",
-      "url": "ban"
-    },
-    {
-      "ten": "Thiết kế",
-      "id": "tMzAktFC",
-      "url": ""
-    },
-    {
       "ten": "PCCC",
       "id": "U9JwaYbN",
       "url": ""
@@ -139,11 +114,6 @@
     {
       "ten": "CNTT",
       "id": "N7Wu4yA8",
-      "url": ""
-    },
-    {
-      "ten": "Y TẾ",
-      "id": "rJQMY02o",
       "url": ""
     },
     {
@@ -1548,93 +1518,27 @@
       "idgiohang": 0,
       "thoigian": "2020-06-24T06:40:59.524Z",
       "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "huMmYBQP",
+      "magiaodich": "0xa8f044f301b2d2ed92e911beeffb07634251016c067e0303e8cfed6d4cf170d3",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Ghế 2",
+          "gia": "130000",
+          "id": "onyCct5Q",
+          "soluongdat": "3"
+        }
+      ],
+      "thanhtien": "0.06874543059919365",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T06:57:35.794Z",
+      "trangthai": "dathanhtoan"
     }
   ],
   "MatHang": [
-    {
-      "ten": "Ghế 2",
-      "id": "onyCct5Q",
-      "mota": "Ghế đẹp nữa nè",
-      "gia": "150000",
-      "anh": "/img/img_products/300x300.jpg",
-      "soluong": "100",
-      "chuyenmuc": "ghe",
-      "giakm": "130000",
-      "hankm": "2020-07-07",
-      "soluongdat": 1
-    },
-    {
-      "ten": "Ghế game cc",
-      "id": "LVImo5xl",
-      "mota": "Không đẹp nè",
-      "gia": "190000",
-      "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
-      "soluong": "150",
-      "chuyenmuc": "ghe",
-      "giakm": "",
-      "hankm": "",
-      "soluongdat": 1
-    },
-    {
-      "ten": "Bàn 1tttttttttttt",
-      "id": "GP4mRNlm",
-      "mota": "Bàn đẹp nè",
-      "gia": "500000",
-      "anh": "/img/img_products/300x300.jpg",
-      "soluong": "120",
-      "chuyenmuc": "Bàn",
-      "soluongdat": 1,
-      "giakm": "",
-      "hankm": ""
-    },
-    {
-      "ten": "Bàn game",
-      "id": "m0820HIz",
-      "mota": "Bàn ko đẹp nè",
-      "gia": "900000",
-      "anh": "/img/img_products/300x300.jpg",
-      "soluong": "50",
-      "chuyenmuc": "Bàn",
-      "giakm": "",
-      "hankm": "",
-      "soluongdat": 1
-    },
-    {
-      "ten": "Chair nè",
-      "id": "woTukjEX",
-      "mota": "không có gi",
-      "gia": "600000",
-      "anh": "/img/img_products/300x300.jpg",
-      "soluong": "120",
-      "chuyenmuc": "Adapter wifi",
-      "giakm": "350000",
-      "hankm": "2020-06-05",
-      "soluongdat": 1
-    },
-    {
-      "ten": "Macbook",
-      "id": "Zlkr9Rmt",
-      "mota": "Có tiền rồi mua",
-      "gia": "23000000",
-      "anh": "/img/img_products/300x300.jpg",
-      "soluong": "15",
-      "chuyenmuc": "Adapter wifi",
-      "giakm": "19999999",
-      "hankm": "2020-06-11",
-      "soluongdat": 1
-    },
-    {
-      "ten": "test",
-      "id": "jkkr9WXV",
-      "mota": "test",
-      "gia": "200000",
-      "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
-      "soluong": "10",
-      "chuyenmuc": "test 22",
-      "giakm": "150000",
-      "hankm": "2020-06-17",
-      "soluongdat": 1
-    },
     {
       "ten": "Bitcoin Item",
       "id": "1234567999999",
@@ -1646,6 +1550,17 @@
       "giakm": "0.15",
       "hankm": "2020-06-25",
       "soluongdat": 1
+    },
+    {
+      "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+      "id": "vhgLlRgE",
+      "mota": "KHAI GIẢNG Khoá học Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN tại HCM\r\nVới tiêu chí “Thiết kế chuẩn cho công trình bền vững”\r\nNội dung khóa học gồm:\r\nPhần 1: Thiết kế bơm, van, ống và phụ kiện của hệ thống PCCC\r\nPhần 2: Thiết kế hệ thống Sprinkler\r\nPhần 3: Thiết kế hệ thống xả tràn (Deluge System)\r\nPhần 4: Thiết kế hệ thống bọt chữa cháy (Foam System)\r\nPhần 5: Mở rộng (phần mềm tính toán thủy lực Pipenet, xây dựng bản vẽ PCCC",
+      "gia": "650000",
+      "anh": "https://phongchayphucthanh.com/wp-content/uploads/2019/01/Th%E1%BB%A7-t%E1%BB%A5c-xin-gi%E1%BA%A5y-ch%E1%BB%A9ng-nh%E1%BA%ADn-%C4%91%E1%BB%A7-%C4%91i%E1%BB%81u-ki%E1%BB%87n-PCCC-cho-h%E1%BB%99-kinh-doanh-800x500_c-707x442.png",
+      "soluong": "30",
+      "chuyenmuc": "PCCC",
+      "giakm": "500000",
+      "hankm": "2020-07-03"
     }
   ]
 }

@@ -46,9 +46,9 @@
         <tr>
           <td>Số tiền:</td>
           <% if (donhang.thanhtoan != "ether"){ %> 
-            <td><%= donhang.thanhtien %> đ</td>
+            <td><%= donhang.thanhtien %> VND</td>
           <% }else{ %>
-            <td><%= (donhang.thanhtien) %> ETH</td>
+            <td><%= (donhang.thanhtien/1).toFixed(3) %> ETH</td>
           <% } %> 
         </tr>
         <tr>

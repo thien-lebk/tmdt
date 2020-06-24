@@ -13,7 +13,12 @@
         <p>ID hóa đơn: <%= donhang.idhoadon %></p><hr>
         <p>Hình thức thanh toán: <%= donhang.thanhtoan %></p><hr>
         <p>Mã giao dịch: <%= donhang.magiaodich %> </p><hr>
-        <p>Số tiền: <%= (donhang.thanhtien/1).toFixed(3) %></p><hr>
+        <% if (donhang.thanhtoan != "ether"){ %>
+          <p>Số tiền: <%= (donhang.thanhtien/1) %> VND</p><hr>
+        <% }else{ %>
+          <p>Số tiền: <%= (donhang.thanhtien/1).toFixed(3) %> ETH</p><hr>
+        <% } %> 
+        
         <p>Thời gian đặt hàng: <%= new Date(donhang.thoigian).toLocaleString() %></p>
       </div>
     
