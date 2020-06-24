@@ -6,6 +6,7 @@ const db = low(adapter)
 var md5 = require('md5');
 var randomid = require('randomid');
 const { log } = require('debug');
+var random = require('random');
 
 //End of Import lowDB
 //Date time
@@ -182,7 +183,7 @@ module.exports.postthemmathang = function (req, res, next) {
     var chuyenmuc = req.body.chuyenmuc;
     var giakm = req.body.giakm;
     var hankm = req.body.hankm;
-    var id = randomid();
+    var id = random.int(min = 0, max = 999999).toString();
 
     db.get('MatHang')
         .push({ ten: ten, id: id, mota: mota, gia: gia, anh: anh, soluong: soluong, chuyenmuc: chuyenmuc , giakm: giakm, hankm: hankm})
@@ -415,13 +416,13 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
         web3.eth.getBalance(user_address).then(console.log);
         web3.eth.getGasPrice().then(console.log)
         
-        var book_isbn = "4943518564"
+        var id_sanpham = req.body.id;
         
         contract.methods.getOrderHistory(user_address).call().then(console.log).catch(function () {console.log("Promise Rejected");});;
 
         var nonce =  web3.eth.getTransactionCount(user_address);
         // var nonceHex
-        var transaction = contract.methods.implementTransaction(user_address, book_isbn, soluongdat);
+        var transaction = contract.methods.implementTransaction(user_address, id_sanpham, soluongdat);
         var encodeABI = transaction.encodeABI();
         var tx = {
             from: user_address,

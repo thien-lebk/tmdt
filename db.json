@@ -1536,21 +1536,27 @@
       "idgiohang": 0,
       "thoigian": "2020-06-24T06:57:35.794Z",
       "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "VpxepQFw",
+      "magiaodich": "0xe5fb62394545050cdcce1d883bbea7d13ccc35def744b56178817766f1f55d44",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Bàn chơi game",
+          "gia": "800000",
+          "id": "841923",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "0.14101626789578184",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T08:10:35.843Z",
+      "trangthai": "dathanhtoan"
     }
   ],
   "MatHang": [
-    {
-      "ten": "Bitcoin Item",
-      "id": "1234567999999",
-      "mota": "Mua bang ether",
-      "gia": "0.2",
-      "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
-      "soluong": "10",
-      "chuyenmuc": "test2",
-      "giakm": "0.15",
-      "hankm": "2020-06-25",
-      "soluongdat": 1
-    },
     {
       "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
       "id": "vhgLlRgE",
@@ -1561,6 +1567,28 @@
       "chuyenmuc": "PCCC",
       "giakm": "500000",
       "hankm": "2020-07-03"
+    },
+    {
+      "ten": "Ghế 2",
+      "id": "305177",
+      "mota": "dsadsa dsa\r\nfsafsdfdsfds",
+      "gia": "500000",
+      "anh": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80",
+      "soluong": "15",
+      "chuyenmuc": "DẦU",
+      "giakm": "",
+      "hankm": ""
+    },
+    {
+      "ten": "Bàn chơi game",
+      "id": "841923",
+      "mota": "dsadsa ádatfg\r\nvdsfdjsklghdfsljkgd",
+      "gia": "800000",
+      "anh": "https://images.unsplash.com/photo-1574189555774-7cbcd66d0fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "soluong": "11",
+      "chuyenmuc": "DẦU",
+      "giakm": "",
+      "hankm": ""
     }
   ]
 }
