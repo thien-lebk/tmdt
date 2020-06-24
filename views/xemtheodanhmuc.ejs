@@ -49,12 +49,12 @@
 
     <% if(listsp[0]){ %>
       <div style="padding-top: 50px; padding-bottom: 30px;">
-        <h1>Danh mục: <%= listsp[0].chuyenmuc  %> </h1>
+        <h4 class="text-danger font-weight-bold">Danh mục: <%= listsp[0].chuyenmuc  %> </h4>
       </div>
     
 
     <% }else{ %>
-    <h1 style="margin-top: 20px; margin-bottom: 20px;">Danh mục này chưa có sản phẩm</h1>
+    <h4 class="text-danger font-weight-bold" style="margin-top: 20px; margin-bottom: 20px;">Danh mục này chưa có sản phẩm</h4>
     <%  } %>
     <div class="owl-carousel owl-theme margin-items product-items-2" style="width: 100%; height: 100%;">
       <%- include("chucnang/itemsList.ejs") %>

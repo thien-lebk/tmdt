@@ -28,9 +28,16 @@
         <th scope="row"></th>
         <td><%= element.idhoadon %></td>
         <td><%= element.thanhtoan %></td>
-        <td><%= element.magiaodich %></td>
+        <!-- <td><%= element.magiaodich %></td> -->
         <% if (element.thanhtoan != "ether"){ %> 
-            <td><%= element.thanhtien %> VND</td>
+          <td><%= element.magiaodich %></td>
+          
+        <% }else{ %>
+          <td><a href="<%= 'https://rinkeby.etherscan.io/tx/'+element.magiaodich %>"><%= element.magiaodich %></a> </td>
+          
+        <% } %>
+        <% if (element.thanhtoan != "ether"){ %> 
+            <td><%= (element.thanhtien).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> VND</td>
         <% }else{ %>
             <td><%= (element.thanhtien/1).toFixed(3) %> ETH</td>
         <% } %> 

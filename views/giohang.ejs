@@ -26,21 +26,21 @@
       <div class="card mb-5" style="width: 18rem;">
         <img src=<%= element.anh %> alt=<%= element.ten %>>
         <div class="card-body">
-          <h5 class="card-title"> Mặt hàng: <%= element.ten %></h5>
-          <p> Mô tả: <%= element.mota %></p>
-          <P>Số lượng trong kho: <%= element.soluong %></P>
+          <h5 class="card-title"> Khóa học: <%= element.ten %></h5>
+          <!-- <p> Mô tả: <%= element.mota %></p> -->
+          <!-- <P>Số lượng trong kho: <%= element.soluong %></P> -->
           <!-- Kiểm tra coi có khuyến mãi ko -->
           <% var date1 = new Date(element.hankm); %>
           <% var date2 = new Date() %>  
           <% if ((date1.getTime() >= date2.getTime()) && (element.giakm != "")) { %>
             <div style="height: 50px;">
-              <p style="font-size: 16px;" class="card-text price">Giá <%= element.giakm %>đ</p>
-              <p class="card-text ogri-price"><del><%= element.gia %> đ</del></p>
+              <p style="font-size: 16px;" class="card-text price">Giá <%= element.giakm.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %>đ</p>
+              <p class="card-text ogri-price"><del><%= element.gia.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> đ</del></p>
             </div>
             
           <% } else { %> 
             <div style="height: 50px;">
-            <p style="font-size: 16px;" class="card-text price pb-2">Giá <%= element.gia %>đ</p>
+            <p style="font-size: 16px;" class="card-text price pb-2">Giá <%= element.gia.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %>đ</p>
           </div>
           <% } %> 
           <form action="xoasanphamkhoigio" method="post">
@@ -54,7 +54,7 @@
                 <p>Số lượng</p>
               </div>
               <div class="col-6 text-left">
-                <input style="max-width: 75px; min-width: 75px; text-align: center;" type="number" id="<%= element.id %>" name="<%= element.id %>" value="<%= element.soluongdat %>"
+                <input min="1" style="max-width: 75px; min-width: 75px; text-align: center;" type="number" id="<%= element.id %>" name="<%= element.id %>" value="<%= element.soluongdat %>"
               onchange="<%= 'a' + element.id %>(),tongtien()"/>
               </div>
             
@@ -65,7 +65,7 @@
                 <p>Thành tiền:</p>
               </div>
               <div class="col-6 text-left">
-                <p id="<%= element.ten %>"><%= element.gia %>đ</p>
+                <p id="<%= element.ten %>"><%= element.gia.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %>đ</p>
               </div>
             </div>
             <button type="submit" class="btn btn-danger">Xóa</button>
@@ -90,9 +90,9 @@
       <% var date1 = new Date(element.hankm); %>
       <% var date2 = new Date() %>  
       <% if ((date1.getTime() >= date2.getTime()) && (element.giakm != "")) { %>
-        document.getElementById("<%= element.ten %>").innerHTML = soluong * <%= element.giakm %> +"đ";
+        document.getElementById("<%= element.ten %>").innerHTML = (soluong * <%= element.giakm %>).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +"đ";
       <% } else { %> 
-        document.getElementById("<%= element.ten %>").innerHTML = soluong * <%= element.gia %> +"đ";
+        document.getElementById("<%= element.ten %>").innerHTML = (soluong * <%= element.gia %>).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +"đ";
       <% } %> 
       
       let item = {
@@ -123,7 +123,7 @@
           <% } %>
           sum += a<%= element.id %> ;
     <% }) %>
-          document.getElementById("tongtien").innerHTML = "Tổng tiền: " + sum + "đ";
+          document.getElementById("tongtien").innerHTML = "Tổng tiền: " + sum.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "đ";
       }
     tongtien();
   </script>

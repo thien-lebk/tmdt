@@ -5,6 +5,7 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 var md5 = require('md5');
 var randomid = require('randomid');
+var random = require('random');
 const { log } = require('debug');
 var random = require('random');
 
@@ -692,6 +693,9 @@ module.exports.xoasanphamkhoigio = function (req, res, next) {
     var chuyenmuc = db.get('Chuyenmuc').value();
     var giohang = db.get('GioHang').find({ username: username }).value();
     var mathang = [];
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
     giohang.mathang.forEach(element => {
         if (element.id != idsanpham) {
             mathang.push(element);
@@ -699,7 +703,7 @@ module.exports.xoasanphamkhoigio = function (req, res, next) {
     });
     db.get("GioHang").find({ username: username }).assign({ mathang }).write();
     giohang = db.get('GioHang').find({ username: username }).value();
-    res.render('giohang', { chuyenmuc: chuyenmuc, name: username, giohang: giohang,role:"" });
+    res.render('giohang', { chuyenmuc: chuyenmuc, name: username, giohang: giohang,role:role });
 }
 //AJAX cap nhat gio hang
 module.exports.capnhatgiohang = function (req, res, next) {
@@ -935,6 +939,7 @@ module.exports.xemtheodanhmuc = function(req, res, next){
     if (req.cookies.info) {
         if (req.cookies.info.username) {
             name = req.cookies.info.username;
+            role = req.cookies.info.role;
         } else {
             name = "";
 
@@ -949,7 +954,8 @@ module.exports.xemtheodanhmuc = function(req, res, next){
     var find = db.get('Chuyenmuc').value();
     // console.log(dsSanpham);
     // console.log("Params la gi: ", req.params);
-    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find,role:""});
+    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find,role:role});
+
 }
 
 // 
@@ -1041,6 +1047,7 @@ module.exports.search = function(req, res, next){
     if (req.cookies.info) {
         if (req.cookies.info.username) {
             name = req.cookies.info.username;
+            role = req.cookies.info.role;
         } else {
             name = "";
 
@@ -1066,7 +1073,7 @@ module.exports.search = function(req, res, next){
 
     //console.log(dsSanpham);
 
-    res.render('search', {name: name, listsp: dsSanpham, find: find,role: "", query: req.query.name});
+    res.render('search', {name: name, listsp: dsSanpham, find: find,role: role, query: req.query.name});
 }
 
 //Xoá chuyen muc POST

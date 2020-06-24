@@ -112,8 +112,12 @@ router.get('/vnpay_return', function (req, res, next) {
 
     var checkSum = sha256(signData);
     var idHoaDon = (vnp_Params.vnp_OrderInfo);
-
+    var transNo = (vnp_Params.vnp_TransactionNo);
+    if(transNo == 0){
+        res.render('error',{message: "Giao dịch thất bại"});
+    }
     if(secureHash === checkSum){
+
         //Kiem tra xem du lieu trong db co hop le hay khong va thong bao ket qua
 
     //    var hoaDon = db.get("HoaDon").find({ idhoadon: idHoaDon }).value();

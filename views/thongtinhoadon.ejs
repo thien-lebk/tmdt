@@ -41,7 +41,14 @@
         </tr>
         <tr>
           <td>Mã giao dịch:</td>
-          <td><%= donhang.magiaodich %></td>
+          <!-- <td><%= donhang.magiaodich %></td> -->
+          <% if (donhang.thanhtoan != "ether"){ %> 
+            <td><%= donhang.magiaodich %></td>
+            
+          <% }else{ %>
+            <td><a href="<%= 'https://rinkeby.etherscan.io/tx/'+donhang.magiaodich %>"><%= donhang.magiaodich %></a> </td>
+            
+          <% } %>
         </tr>
         <tr>
           <td>Số tiền:</td>

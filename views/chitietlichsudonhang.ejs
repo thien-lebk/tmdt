@@ -12,7 +12,14 @@
       <div class="my-5 p-3" style="border: 1px solid grey; display: inline-block;">
         <p>ID hóa đơn: <%= donhang.idhoadon %></p><hr>
         <p>Hình thức thanh toán: <%= donhang.thanhtoan %></p><hr>
-        <p>Mã giao dịch: <%= donhang.magiaodich %> </p><hr>
+        <!-- <p>Mã giao dịch: <%= donhang.magiaodich %> </p><hr> -->
+        <% if (donhang.thanhtoan != "ether"){ %> 
+          <p>Mã giao dịch: <%= donhang.magiaodich %></p>
+          
+        <% }else{ %>
+          <p>Mã giao dịch: <a href="<%= 'https://rinkeby.etherscan.io/tx/'+donhang.magiaodich %>"><%= donhang.magiaodich %></a> </p>
+          
+        <% } %>
         <% if (donhang.thanhtoan != "ether"){ %>
           <p>Số tiền: <%= (donhang.thanhtien/1) %> VND</p><hr>
         <% }else{ %>
