@@ -8,15 +8,17 @@
       <!-- Navnar -->
     <%- include("chucnang/navbar.ejs") %>
       <!-- End of Navnar -->
-    <div class="container mb-5">
-    <p>ID hóa đơn: <%= donhang.idhoadon %></p>
-    <p>Hình thức thanh toán: <%= donhang.thanhtoan %></p>
-    <p>Mã giao dịch: <%= donhang.magiaodich %> </p>
-    <p>Số tiền: <%= donhang.thanhtien %></p>
-      <p>Thời gian đặt hàng: <%= new Date(donhang.thoigian).toLocaleString() %></p>
+    <div class="container mb-5 text-center">
+      <div class="my-5 p-3" style="border: 1px solid grey; display: inline-block;">
+        <p>ID hóa đơn: <%= donhang.idhoadon %></p><hr>
+        <p>Hình thức thanh toán: <%= donhang.thanhtoan %></p><hr>
+        <p>Mã giao dịch: <%= donhang.magiaodich %> </p><hr>
+        <p>Số tiền: <%= donhang.thanhtien %></p><hr>
+        <p>Thời gian đặt hàng: <%= new Date(donhang.thoigian).toLocaleString() %></p>
+      </div>
     
-    <table class="table">
-      <thead>
+    <table class="table table-striped">
+      <thead class="thead-dark">
         <tr>
           <th scope="col"></th>
           <th scope="col">Tên sản phẩm </th>
