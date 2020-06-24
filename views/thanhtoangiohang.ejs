@@ -13,16 +13,16 @@
   
 
     
-<p style="font-size: 36px;" class="price">Tổng số tiền: <%= tongtien %> đ </p>
+<p style="font-size: 36px;" class="price">Tổng số tiền: <%= tongtien.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> đ </p>
 <br>
   <form action="xacnhanthanhtoangiohang" method="post">
     <input type="hidden" name="idgiohang" value="<%= giohang.idgiohang %>">
     <label>Hình thức thanh toán</label>
-    <select name="thanhtoan" id="thanhtoan">
+    <select style="width: 150px;" class="mx-auto form-control" name="thanhtoan" id="thanhtoan">
       <!-- Su dung forEach -->
         <option value= "momo" > Momo</option>
         <option value= "vnpay" >VNPAY</option>
-        <option value= "ether" >Ether</option>
+        <!-- <option value= "ether" >Ether</option> -->
     </select>
     <br>
     <button type="submit" class="btn btn-lg btn-success my-4">Xác nhận</button>
@@ -39,9 +39,9 @@
           <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
           <div class="card-body">
             <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
-            <p> Mô tả: <%= mathang.mota %></p>
+            <!-- <p> Mô tả: <%= mathang.mota %></p> -->
             <P>Số lượng <%= mathang.soluongdat %></p>
-            <p class="card-text">Thành tiền: <%= mathang.gia*mathang.soluongdat %>đ</p>
+            <p class="card-text">Thành tiền: <%= (mathang.gia*mathang.soluongdat).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> đ</p>
            
           </div>
         </div>

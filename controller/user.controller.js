@@ -5,6 +5,7 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 var md5 = require('md5');
 var randomid = require('randomid');
+var random = require('random');
 const { log } = require('debug');
 
 //End of Import lowDB
@@ -182,7 +183,7 @@ module.exports.postthemmathang = function (req, res, next) {
     var chuyenmuc = req.body.chuyenmuc;
     var giakm = req.body.giakm;
     var hankm = req.body.hankm;
-    var id = randomid();
+    var id = random.int(min = 0, max = 999999).toString();
 
     db.get('MatHang')
         .push({ ten: ten, id: id, mota: mota, gia: gia, anh: anh, soluong: soluong, chuyenmuc: chuyenmuc , giakm: giakm, hankm: hankm})
@@ -415,13 +416,13 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
         web3.eth.getBalance(user_address).then(console.log);
         web3.eth.getGasPrice().then(console.log)
         
-        var book_isbn = "4943518564"
+        var id_sanpham = req.body.id;
         
         contract.methods.getOrderHistory(user_address).call().then(console.log).catch(function () {console.log("Promise Rejected");});;
 
         var nonce =  web3.eth.getTransactionCount(user_address);
         // var nonceHex
-        var transaction = contract.methods.implementTransaction(user_address, book_isbn, soluongdat);
+        var transaction = contract.methods.implementTransaction(user_address, id_sanpham, soluongdat);
         var encodeABI = transaction.encodeABI();
         var tx = {
             from: user_address,
@@ -691,6 +692,9 @@ module.exports.xoasanphamkhoigio = function (req, res, next) {
     var chuyenmuc = db.get('Chuyenmuc').value();
     var giohang = db.get('GioHang').find({ username: username }).value();
     var mathang = [];
+    if(req.cookies.info.role){
+        role = req.cookies.info.role;
+    }
     giohang.mathang.forEach(element => {
         if (element.id != idsanpham) {
             mathang.push(element);
@@ -698,7 +702,7 @@ module.exports.xoasanphamkhoigio = function (req, res, next) {
     });
     db.get("GioHang").find({ username: username }).assign({ mathang }).write();
     giohang = db.get('GioHang').find({ username: username }).value();
-    res.render('giohang', { chuyenmuc: chuyenmuc, name: username, giohang: giohang,role:"" });
+    res.render('giohang', { chuyenmuc: chuyenmuc, name: username, giohang: giohang,role:role });
 }
 //AJAX cap nhat gio hang
 module.exports.capnhatgiohang = function (req, res, next) {
@@ -934,6 +938,7 @@ module.exports.xemtheodanhmuc = function(req, res, next){
     if (req.cookies.info) {
         if (req.cookies.info.username) {
             name = req.cookies.info.username;
+            role = req.cookies.info.role;
         } else {
             name = "";
 
@@ -948,7 +953,8 @@ module.exports.xemtheodanhmuc = function(req, res, next){
     var find = db.get('Chuyenmuc').value();
     // console.log(dsSanpham);
     // console.log("Params la gi: ", req.params);
-    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find,role:""});
+    res.render('xemtheodanhmuc', {name: name, listsp: dsSanpham, find: find,role:role});
+
 }
 
 // 
@@ -1040,6 +1046,7 @@ module.exports.search = function(req, res, next){
     if (req.cookies.info) {
         if (req.cookies.info.username) {
             name = req.cookies.info.username;
+            role = req.cookies.info.role;
         } else {
             name = "";
 
@@ -1065,7 +1072,7 @@ module.exports.search = function(req, res, next){
 
     //console.log(dsSanpham);
 
-    res.render('search', {name: name, listsp: dsSanpham, find: find,role: "", query: req.query.name});
+    res.render('search', {name: name, listsp: dsSanpham, find: find,role: role, query: req.query.name});
 }
 
 //Xoá chuyen muc POST

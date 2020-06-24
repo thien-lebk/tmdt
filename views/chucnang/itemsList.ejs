@@ -17,10 +17,10 @@
         <% var date1 = new Date(element.hankm); %>
         <% var date2 = new Date() %>
         <% if ((date1.getTime() >= date2.getTime()) && (element.giakm != "")) { %>
-        <p class="price"><%= element.giakm %> đ</p>
-        <p class="ogri-price"><del><%= element.gia %> đ</del></p>
+        <p class="price"><%= element.giakm.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> đ</p>
+        <p class="ogri-price"><del><%= element.gia.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> đ</del></p>
         <% } else { %>
-        <p class="price"><%= element.gia %> đ</p>
+        <p class="price"><%= element.gia.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> đ</p>
         <% } %>
       </div>
       <div style="text-align: center;">

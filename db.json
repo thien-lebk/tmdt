@@ -51,20 +51,7 @@
     {
       "username": "admin2",
       "idgiohang": "ve6aLwBh",
-      "mathang": [
-        {
-          "ten": "Chair nè",
-          "id": "woTukjEX",
-          "mota": "không có gi",
-          "gia": "600000",
-          "anh": "/img/img_products/300x300.jpg",
-          "soluong": "120",
-          "chuyenmuc": "Adapter wifi",
-          "giakm": "350000",
-          "hankm": "2020-06-05",
-          "soluongdat": "1"
-        }
-      ]
+      "mathang": []
     },
     {
       "username": "guest",
@@ -1536,31 +1523,400 @@
       "idgiohang": 0,
       "thoigian": "2020-06-24T06:57:35.794Z",
       "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "cJsxgRmy",
+      "magiaodich": "0x2f494b42e9b29fac8d58b0113afe1bcfa252aa15efaa1ebddb0e7dd91f794393",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+          "gia": "500000",
+          "id": "vhgLlRgE",
+          "soluongdat": "2"
+        }
+      ],
+      "thanhtien": "0.17627033486972732",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T07:16:24.528Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "eBC7HFlp",
+      "magiaodich": "30HTMQlV",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+          "gia": "500000",
+          "id": "vhgLlRgE",
+          "soluongdat": "31"
+        }
+      ],
+      "thanhtien": "15500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T07:22:10.821Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "yJGqJeaa",
+      "magiaodich": "kc3yRINc",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+          "gia": "500000",
+          "id": "vhgLlRgE",
+          "soluongdat": "31"
+        }
+      ],
+      "thanhtien": "15500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T07:34:12.338Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "MeRpO0Fj",
+      "magiaodich": "ywJVPseW",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+          "gia": "500000",
+          "id": "vhgLlRgE",
+          "soluongdat": "4"
+        }
+      ],
+      "thanhtien": "2000000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T07:40:56.364Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "5kJWrb4U",
+      "magiaodich": "GSyFAbX9",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+          "gia": "500000",
+          "id": "vhgLlRgE",
+          "soluongdat": "4"
+        }
+      ],
+      "thanhtien": "2000000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T07:47:38.682Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "wQEudWeB",
+      "magiaodich": "VxGfDnHT",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Basic technical English – Elementary",
+          "gia": "500000",
+          "id": "IqZikjXM",
+          "soluongdat": "1"
+        }
+      ],
+      "thanhtien": "500000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T08:58:24.044Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "vv1E1krN",
+      "magiaodich": "mPeV2pPB",
+      "thanhtoan": "momo",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Basic technical English – Elementary",
+          "gia": "500000",
+          "id": "IqZikjXM",
+          "soluongdat": "2"
+        }
+      ],
+      "thanhtien": "1000000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T09:03:56.147Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "fiPi9lF8",
+      "magiaodich": "bMw8xguk",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "gia": "150000",
+          "id": "767582725",
+          "soluongdat": "3"
+        }
+      ],
+      "thanhtien": "450000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T09:23:17.866Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "MX7skhkV",
+      "magiaodich": "IgUcyzBX",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "gia": "150000",
+          "id": "767582725",
+          "soluongdat": "3"
+        }
+      ],
+      "thanhtien": "450000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T09:23:41.508Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "JHwU0XhA",
+      "magiaodich": "0x5813b36b3a12cab0ddd2210e5a37b94fcc004ed3a91045e8ede9517a9b1f168d",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "gia": "150000",
+          "id": "767582725",
+          "soluongdat": "2"
+        }
+      ],
+      "thanhtien": "0.05288110046091819",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T09:24:10.405Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "MSl62ujs",
+      "magiaodich": "WQB1kVYe",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+          "gia": "500000",
+          "id": "1443358",
+          "soluongdat": "4"
+        }
+      ],
+      "thanhtien": "2000000",
+      "idgiohang": 0,
+      "thoigian": "2020-06-24T09:26:40.640Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "oQY27Umr",
+      "magiaodich": "Nz5d4HxB",
+      "thanhtoan": "ether",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "THIẾT KẾ ĐƯỜNG ỐNG",
+          "id": "kSqSIEr0",
+          "soluongdat": "6",
+          "gia": "200000"
+        },
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "id": "zX3QFY8J",
+          "soluongdat": "6",
+          "gia": "150000"
+        }
+      ],
+      "thanhtien": 2100000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-24T09:41:08.232Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "ut8NmbMN",
+      "magiaodich": "0o3E4S4i",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [],
+      "thanhtien": 0,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-24T09:45:27.774Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "2tUhhoBU",
+      "magiaodich": "Y0TqL1gM",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "id": "767582725",
+          "soluongdat": "2",
+          "gia": "150000"
+        },
+        {
+          "ten": "Basic technical English – Elementary",
+          "id": "786725417",
+          "soluongdat": "2",
+          "gia": "500000"
+        }
+      ],
+      "thanhtien": 1300000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-24T09:46:47.326Z",
+      "trangthai": "chuathanhtoan"
+    },
+    {
+      "idhoadon": "N3T9m7ML",
+      "magiaodich": "072aLXpQ",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "id": "767582725",
+          "soluongdat": "2",
+          "gia": "150000"
+        },
+        {
+          "ten": "Basic technical English – Elementary",
+          "id": "786725417",
+          "soluongdat": "2",
+          "gia": "500000"
+        }
+      ],
+      "thanhtien": 1300000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-24T09:47:01.225Z",
+      "trangthai": "dathanhtoan"
+    },
+    {
+      "idhoadon": "RCeazxik",
+      "magiaodich": "43P1t2be",
+      "thanhtoan": "vnpay",
+      "usr": "admin2",
+      "hang": [
+        {
+          "ten": "Basic technical English – Elementary",
+          "id": "786725417",
+          "soluongdat": "1",
+          "gia": "500000"
+        },
+        {
+          "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
+          "id": "1443358",
+          "soluongdat": 1,
+          "gia": "500000"
+        },
+        {
+          "ten": "PRESSURE VESSEL INSPECTION",
+          "id": "767582725",
+          "soluongdat": 1,
+          "gia": "150000"
+        }
+      ],
+      "thanhtien": 1150000,
+      "idgiohang": "ve6aLwBh",
+      "thoigian": "2020-06-24T10:14:42.421Z",
+      "trangthai": "dathanhtoan"
     }
   ],
   "MatHang": [
     {
-      "ten": "Bitcoin Item",
-      "id": "1234567999999",
-      "mota": "Mua bang ether",
-      "gia": "0.2",
-      "anh": "https://b-f10-zpc.zdn.vn/6737811924567195589/0c8efa18b03a4d64142b.jpg",
-      "soluong": "10",
-      "chuyenmuc": "test2",
-      "giakm": "0.15",
-      "hankm": "2020-06-25",
-      "soluongdat": 1
-    },
-    {
-      "ten": "Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN",
-      "id": "vhgLlRgE",
-      "mota": "KHAI GIẢNG Khoá học Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN tại HCM\r\nVới tiêu chí “Thiết kế chuẩn cho công trình bền vững”\r\nNội dung khóa học gồm:\r\nPhần 1: Thiết kế bơm, van, ống và phụ kiện của hệ thống PCCC\r\nPhần 2: Thiết kế hệ thống Sprinkler\r\nPhần 3: Thiết kế hệ thống xả tràn (Deluge System)\r\nPhần 4: Thiết kế hệ thống bọt chữa cháy (Foam System)\r\nPhần 5: Mở rộng (phần mềm tính toán thủy lực Pipenet, xây dựng bản vẽ PCCC",
+      "ten": "Thiết Kế Hệ Thống PCCC",
+      "id": "1443358",
+      "mota": "KHAI GIẢNG Khoá học Thiết Kế Hệ Thống PCCC Theo NFPA & TCVN tại HCM\r\nVới tiêu chí “Thiết kế chuẩn cho công trình bền vững”Nội dung khóa học gồm:\r\nPhần 1: Thiết kế bơm, van, ống và phụ kiện của hệ thống PCCC\r\nPhần 2: Thiết kế hệ thống Sprinkler\r\nPhần 3: Thiết kế hệ thống xả tràn (Deluge System)\r\nPhần 4: Thiết kế hệ thống bọt chữa cháy (Foam System)\r\nPhần 5: Mở rộng (phần mềm tính toán thủy lực Pipenet, xây dựng bản vẽ PCCC",
       "gia": "650000",
-      "anh": "https://phongchayphucthanh.com/wp-content/uploads/2019/01/Th%E1%BB%A7-t%E1%BB%A5c-xin-gi%E1%BA%A5y-ch%E1%BB%A9ng-nh%E1%BA%ADn-%C4%91%E1%BB%A7-%C4%91i%E1%BB%81u-ki%E1%BB%87n-PCCC-cho-h%E1%BB%99-kinh-doanh-800x500_c-707x442.png",
+      "anh": "/img/img_products/PCCC.jpg",
       "soluong": "30",
       "chuyenmuc": "PCCC",
       "giakm": "500000",
-      "hankm": "2020-07-03"
+      "hankm": "2020-07-03",
+      "soluongdat": 1
+    },
+    {
+      "ten": "PRESSURE VESSEL INSPECTION",
+      "id": "767582725",
+      "mota": "Course content:Introduction, Publications, Course Outline & Body of KnowledgeASME Section VIII, Division 1ASME Section 5API 510, Pressure Vessel Inspection CodeAPI 572, Inspection Practices of Pressure VesselAPI RP 576, Inspection of Pressure-relieving DevicesAPI RP 571, Damage Mechanisms (related to pressure vessels in general)ASME Section 9API RP 577, Welding Inspection and MetallurgyAPI 510 Practice examination, Open and Closed Book",
+      "gia": "200000",
+      "anh": "/img/img_products/VESSEL.jpg",
+      "soluong": "100",
+      "chuyenmuc": "DẦU KHÍ",
+      "giakm": "150000",
+      "hankm": "2020-07-01",
+      "soluongdat": 1
+    },
+    {
+      "ten": "Basic technical English – Elementary",
+      "id": "786725417",
+      "mota": "Course content:\r\n\r\nCan you speak English? – first meetings at work, reference, serial, telephone numbers, identifying things, international words, everyday objects\r\nHow do you spell that? – numbers: one to a hundred, spelling, checking an order of technical items, parts.\r\nWhat do you want? – buying food at work, saying what you want, specifying of various items, measurement abbreviations, parts and equipment\r\nIs that correct? – how to say email addresses, how to take and write telephone messages, checking equipment against the list, following instructions\r\nWhere is it? – describing controls – control panel, control station, describing facilities at a company, hotel, describing tests\r\nTell me about it – describing car features, quantities, different materials, shapes, car parts\r\nWhat can it do? – vocabulary of body parts, explaining what robots do, expressing ability, dimensions – questions and answers\r\nWhat do you need? – asking for things, things – singular or plural? decimal numbers and currency, asking for and getting information, tools and equipment\r\nWatch out – warning signs and instructions at the workshops and offices, colours stipulated with the wires connected to correct terminals, identifying people\r\nHere or there? – locating items in an office, telling the time, using determiners in describing pictures, instructions\r\nWhat’s the problem? – expressing problems, suggesting solutions, driving and traffic problems – what’s impossible or necessary?\r\nWhat’s going on? – expressing work tasks, items for mending things, expressing activities in progress, countable & uncountable nouns with some and any\r\nWhat’s it for? – explaining the use of technical items, explaining functions of remote controls electronic devices, identifying things in the pictures\r\nWhat happened? – reporting damage of shipments, adjectives describing things which went wrong, describing a construction project\r\nWhere are you from? – finding out about people , names of countries and nationalities, some statistics, saying fractions",
+      "gia": "500000",
+      "anh": "/img/img_products/BTE.jpg",
+      "soluong": "100",
+      "chuyenmuc": "DẦU",
+      "giakm": "",
+      "hankm": "",
+      "soluongdat": 1
+    },
+    {
+      "ten": "MATLAB CƠ BẢN",
+      "id": "7867224",
+      "mota": "MATLAB (Matrix laboratory) là một môi trường tính toán số và lập trình, được thiết kế bởi công ty MathWorks.\r\n\r\nMATLAB cho phép tính toán số với ma trận, vẽ đồ thị hàm số hay biểu đồ thông tin, thực hiện thuật toán, tạo các giao diện người dùng và liên kết với những chương trình máy tính viết trên nhiều ngôn ngữ lập trình khác.\r\n\r\nMATLAB giúp đơn giản hóa việc giải quyết các bài toán tính toán kĩ thuật so với các ngôn ngữ lập trình truyền thống như C, C++, và Fortran.",
+      "gia": "200000",
+      "anh": "/img/img_products/ML.jpg",
+      "soluong": "10000",
+      "chuyenmuc": "CNTT",
+      "giakm": "",
+      "hankm": ""
+    },
+    {
+      "ten": "KHÓA HỌC AUTOCAD  CƠ BẢN - NÂNG CAO",
+      "id": "7766786",
+      "mota": "\r\nPhần 1: Giới thiệu cơ bản về phần mềm\r\nHướng dẫn cài đặt phần mềm\r\nLàm quen với giao diện\r\nCác thiết lập cơ bản trong AutoCad Các lệnh thiết lập bản vẽ cơ bản\r\nChức năng một số phím đặc biệt\r\nTạo File bản vẽ mới\r\nLưu File bản vẽ\r\nThiết lập layer, dim, text tiêu chuẩn\r\nCác lệnh vẽ cơ bản về hệ toạ độ\r\nCác phương pháp xác định toạ độ\r\nPhần 2: Làm việc với phần mềm, công cụ trong phần mềm\r\nCách đổi lệnh tắt để vẽ nhanh hơn\r\nCác công cụ hỗ trợ vẽ đối tượng (Grid và Snap, Ortho Mode và Polar Tracking, Dynamic Input…)\r\nHiệu chỉnh đối tượng sử dụng các phép biến hình (Move, Copy, Rotate, Offset và Mirror,Polar Array…)\r\nLàm việc với Layers\r\nHatch, Dim nhiều tỉ lệ trong bản vẽ.\r\nThực hành lệnh ghi, hiệu chỉnh văn bản, kích thước, tô vật liệu sử dụng Block, layer….\r\nPhần 3: Quản lý và hiệu chỉnh bản vẽ kỹ thuật với AutoCad\r\nQuản lý bản vẽ với lệnh XREF\r\nTạo Template và cách sử dụng Template\r\nHướng dẫn sử dụng thư viện Autolisp, Hatch Support thiết lập bản vẽ\r\nPhương pháp đổi lệnh tắt\r\nLệnh tạo khối Block\r\nLệnh chèn Block vào bản vẽ Insert\r\nPhương pháp đổi lệnh tắt\r\nAnnotative chon Dim, Text, Hatch và Block trong làm tỷ lệ bản vẽ\r\nSử dụng Block Attibute, Block Dynamic trong AuToCad.\r\nPhần 4: Thực hành, hoàn thiện 1 bản vẽ kỹ thuật\r\nHoàn thiện bản vẽ hệ thống đường điện\r\nHoàn thiện hệ thống bản vẽ cấp thoát nước\r\nThể hiện bản vẽ thi công thực tế\r\nThực hành vẽ các bản vẽ đồ vật, chi tiết máy\r\nThực hành vẽ phối cảnh\r\nTest sản phẩm đạt yêu cầu tốt nghiệp\r\nTrao chứng nhận\r\nKết thúc khóa học",
+      "gia": "1000000",
+      "anh": "/img/img_products/CAD.jpg",
+      "soluong": "100",
+      "chuyenmuc": "P&ID",
+      "giakm": "980000",
+      "hankm": "2020-07-01"
+    },
+    {
+      "ten": "KHÓA HỌC CHUYÊN VIÊN ISO HỆ THỐNG QUẢN LÝ",
+      "id": "428577",
+      "mota": "KHÓA HỌC CHUYÊN VIÊN ISOHỆ THỐNG QUẢN LÝ TÍCH HỢP ISO 9001:2015 - ISO 14001:2015 - ISO 45001:2018",
+      "gia": "2000000",
+      "anh": "/img/img_products/ISO.jpg",
+      "soluong": "100",
+      "chuyenmuc": "PCCC",
+      "giakm": "1600000",
+      "hankm": "2020-07-07"
+    },
+    {
+      "ten": "THIẾT KẾ ĐƯỜNG ỐNG",
+      "id": "123456",
+      "mota": "Những kiến thức trong trường đại học là chưa đủ để một sinh viên mới tốt nghiệp trở thành một kỹ sư công nghệ đường ống thực thụ. Bên cạnh những kiến thức hàn lâm, phần mềm cơ bản như autocad, các kỹ năng mềm được trang bị từ trường học thì sinh viên hoặc người mới vào nghề phải học rất nhiều kiến thức.\r\n\r\nTheo các giảng viên giàu kinh nghiệm của ANTDEMY thì để trở thành một kỹ sư thiết kế đường ống trong tương lại cần tìm hiểu chuyên sâu về :\r\n\r\nMỗi kỹ sư thiết kế đường ống (piping designer) đều phải học từ những kiến thức cơ bản như những khái niệm về đường ống,valve, fitting, thiết bị đo lường (instrument), công nghệ trong các nhà máy hay công trình mình sẽ tham gia.\r\nĐến các kiến thức chuyên sâu về Thiết kế Cơ khí Đường Ống, quy trình thiết kế đường ống, bản vẽ kỹ thuật, tài liệu kỹ thuật, tiêu chuẩn thiết kế\r\nCách đọc hiểu bản vẽ, tài liệu đường ống và tài liệu kỹ thuật trong công trình mình sẽ đảm nhận, đến vô số các các quy chuẩn quốc tế ANSI,ASME, API cũng như tiêu chuẩn Việt Nam.\r\nSử dụng thành thạo các phần mềm thiết kế chuyên môn như : phần mềm vẽ Autocad 2D, dựng mô hình 3d (PDMS/ Cad plant 3D/ SP3D), phân tích ứng suất đường ống (Ceasar II).\r\nDo đó, tất cả kỹ sư khi vào làm việc cho phòng Piping đều phải trải qua rất nhiều khóa đào tạo chuyên nghiệp. Đây sẽ là hành trang tuyệt vời khi các bạn muốn làm việc trong các lĩnh vực : Thiết kế công trình Dầu Khí, công trình công nghiệp, hóa dầu, đóng tàu, hàng hải.",
+      "gia": "200000",
+      "anh": "/img/img_products/DUONGONG.jpg",
+      "soluong": "100",
+      "chuyenmuc": "ĐƯỜNG",
+      "giakm": "",
+      "hankm": "",
+      "soluongdat": 1
     }
   ]
 }

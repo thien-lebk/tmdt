@@ -19,9 +19,9 @@
           <img src=<%= mathang.anh %> alt=<%= mathang.ten %>>
           <div class="card-body">
             <h5 class="card-title"> Mặt hàng: <%= mathang.ten %></h5>
-            <p> Mô tả: <%= mathang.mota %></p>
-            <P>Số lượng trong kho: <%= mathang.soluong %></P>
-            <p class="card-text">Giá <%= mathang.gia %>đ</p>
+            <!-- <p> Mô tả: <%= mathang.mota %></p> -->
+            <!-- <P>Số lượng trong kho: <%= mathang.soluong %></P> -->
+            <p class="card-text">Giá <%= mathang.gia.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %>đ</p>
             <form action="hoadon" method="post">
               <input type="hidden" name="ten" value=<%= mathang.ten %>>
               <input type="hidden" name="anh" value=<%= mathang.anh %>>
@@ -29,9 +29,9 @@
               <input type="hidden" name="id" value=<%= mathang.id %>>
               <input type="hidden" id="gia" name="gia" value=<%= mathang.gia %>>
               <label>Số lượng</label>
-              <input type="number" id="soluongdat" name="soluongdat" value="1"  onchange="myFunction()"	>
+              <input min="1" type="number" id="soluongdat" name="soluongdat" value="1"  onchange="myFunction()"	>
               <p>Thành tiền:</p>
-              <p style="font-size: 20px;" class="price" id="thanhtien"><%= mathang.gia %> đ</p>
+              <p style="font-size: 20px;" class="price" id="thanhtien"><%= mathang.gia.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %> đ</p>
               <div style="text-align: center;">
                 <button style="margin-top: 15px;" class="btn btn-outline-success " type="submit">Mua hàng</button>
               </div>
@@ -49,7 +49,7 @@
     function myFunction() {
       var soluong = document.getElementById("soluongdat").value;
       var gia = document.getElementById("gia").value;
-      document.getElementById("thanhtien").innerHTML = soluong * gia;
+      document.getElementById("thanhtien").innerHTML = (soluong * gia).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
       //myFunction();
     }
   </script>

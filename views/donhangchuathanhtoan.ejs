@@ -30,7 +30,7 @@
           
           <td><%= element.thanhtoan %></td>
           <td><%= element.magiaodich %></td>
-          <td><%= element.thanhtien %></td>
+          <td><%= (element.thanhtien).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") %></td>
           <td><%= new Date(element.thoigian).toLocaleString() %></td>
           <td>
             <form action="donhangchuathanhtoan" method="post">
