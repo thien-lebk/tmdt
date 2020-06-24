@@ -28,7 +28,11 @@
         <td><%= element.idhoadon %></td>
         <td><%= element.thanhtoan %></td>
         <td><%= element.magiaodich %></td>
-        <td><%= element.thanhtien %></td>
+        <% if (element.thanhtoan != "ether"){ %> 
+            <td><%= element.thanhtien %> VND</td>
+        <% }else{ %>
+            <td><%= (element.thanhtien/1).toFixed(3) %> ETH</td>
+        <% } %> 
         <td><%= new Date(element.thoigian).toLocaleString() %></td>
         <td>
           <form action="chitietlichsudonhang" method="post">

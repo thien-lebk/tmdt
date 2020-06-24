@@ -12,7 +12,7 @@
     <p>ID hóa đơn: <%= donhang.idhoadon %></p>
     <p>Hình thức thanh toán: <%= donhang.thanhtoan %></p>
     <p>Mã giao dịch: <%= donhang.magiaodich %> </p>
-    <p>Số tiền: <%= donhang.thanhtien %></p>
+    <p>Số tiền: <%= (donhang.thanhtien/1).toFixed(3) %></p>
       <p>Thời gian đặt hàng: <%= new Date(donhang.thoigian).toLocaleString() %></p>
     
     <table class="table">

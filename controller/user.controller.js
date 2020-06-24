@@ -368,6 +368,8 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
     } else if (thanhtoan== "ether"){
         console.log("Thanh toan bang ether ========================================================");
 
+        var user_address = req.body.user_address;
+        var privateKey = '0x' + req.body.private_key;
         var thanhtien = req.body.thanhtien;
         var soluongdat = req.body.soluongdat;
         // var thoigian = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + "-" + d.getHours() + "h" + d.getMinutes() + "p";
@@ -410,9 +412,9 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
         
 
         // Test function
-        web3.eth.getBalance("0x7De8d441fBb7a6868D3ce81eE26d1Fc0868E8761").then(console.log);
+        web3.eth.getBalance(user_address).then(console.log);
         web3.eth.getGasPrice().then(console.log)
-        var user_address = "0x7De8d441fBb7a6868D3ce81eE26d1Fc0868E8761"
+        
         var book_isbn = "4943518564"
         
         contract.methods.getOrderHistory(user_address).call().then(console.log).catch(function () {console.log("Promise Rejected");});;
@@ -430,14 +432,16 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
             chainId: 4,
             // nonce: 5
         }; 
-        var privateKey = '0x6B4C896CAEB9839A433F0BADBBB2FA28D7B2691E268DFD577C55D9B6D606EC7D';
+        
         // const privateKey = Buffer.from('6B4C896CAEB9839A433F0BADBBB2FA28D7B2691E268DFD577C55D9B6D606EC7D', 'hex')
+
+
         web3.eth.accounts.signTransaction(tx, privateKey).then(signed => {
             var tran = web3.eth.sendSignedTransaction(signed.rawTransaction);
             
-            tran.on('confirmation', (confirmationNumber, receipt) => {
-              console.log('confirmation: ' + confirmationNumber);
-            });
+            // tran.on('confirmation', (confirmationNumber, receipt) => {
+            //   console.log('confirmation: ' + confirmationNumber);
+            // });
         
             tran.on('transactionHash', hash => {
               console.log('hash');
@@ -445,12 +449,34 @@ module.exports.xacnhanthanhtoan = function (req, res, next) {
             });
         
             tran.on('receipt', receipt => {
-              console.log('reciept');
+              console.log('receipt');
               console.log(receipt);
+              console.log("This come second")
+
+            
+              //IN HOÁ ĐƠN Ở ĐÂY
+              var idhoadon = randomid();
+
+              var donhang = { idhoadon: idhoadon, magiaodich: receipt.transactionHash, thanhtoan: thanhtoan, usr: usr, hang: [{ ten: mathang.ten, gia: gia, id: id, soluongdat: soluongdat }], thanhtien: thanhtien, idgiohang: 0, thoigian: thoigian, trangthai:'dathanhtoan' };
+              db.get('HoaDon')
+                  .push(donhang)
+                  .write()
+      
+              var name = req.cookies.info.username;
+              var role = "";
+      
+              if(req.cookies.info.role){
+                  role = req.cookies.info.role;
+              }
+              res.render('thongtinhoadon', { chuyenmuc: chuyenmuc, mathang: mathang, donhang: donhang, name: name,role:role , find: find});
+              /////////////////////////////////////////
+
             });
         
             tran.on('error', console.error);
         });
+
+        
 
     } else{
 

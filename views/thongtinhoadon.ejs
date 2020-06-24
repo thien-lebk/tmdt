@@ -45,7 +45,11 @@
         </tr>
         <tr>
           <td>Số tiền:</td>
-          <td><%= donhang.thanhtien %> đ</td>
+          <% if (donhang.thanhtoan != "ether"){ %> 
+            <td><%= donhang.thanhtien %> đ</td>
+          <% }else{ %>
+            <td><%= (donhang.thanhtien) %> ETH</td>
+          <% } %> 
         </tr>
         <tr>
           <td>Thời gian mua:</td>
@@ -61,6 +65,9 @@
 
 
   <%- include("chucnang/footer.ejs") %>
+  <script>
+    
+  </script>
 
 </body>
 
