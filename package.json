@@ -25,9 +25,9 @@
     "random-id": "^1.0.4",
     "randomid": "^1.1.0",
     "sha256": "^0.2.0",
-    "web3": "^1.2.9"
+    "web3": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.22"
   }
 }
